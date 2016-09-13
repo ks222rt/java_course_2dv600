@@ -6,12 +6,13 @@ package ks222rt_assign2.Exercise_2;
 public class Lorry extends Vehicle {
     final int MAX_PASSENGERS = 2;
 
-    public Lorry(int p) throws Exception {
+    public Lorry(int p, String id) throws Exception {
         if (rightAmountOfPassengers(p, MAX_PASSENGERS)){
-            this.passengers = new Passenger(p);
-            this.feeForPassengers = 15 * this.passengers.getAmount();
+            this.regNr = id;
+            this.feeForPassengers = 15;
             this.fee = 300;
             this.space = 8;
+            this.passengers = p;
         }else{
             throw new Exception("To many people in the car");
         }
