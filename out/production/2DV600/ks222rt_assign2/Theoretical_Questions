@@ -1,0 +1,67 @@
+1. What is the Java Virtual Machine? What is Bytecode?
+A JVM is a virtual machine that enables a developers computer to run a Java program. It interprets the compiled
+java code so it can perform the instructions the Java program has. Bytecode is a form of instruction set designed for
+an efficient execution by a software interpreter, in this case the JVM.
+
+2. What is the Java Classpath?
+Java Classpath is an environment variable in the Java compiler which is used by the System or
+the "Application Classloader" to specify and load all the user-defined classes and packages.
+
+3. How do you compile and run your java program without the help of an Integrated Development Environment (IDE) (e.g., an IDE like Eclipse)?
+You can compile your java code within the terminal by typing "javac Example.java". This should generate a class file
+with bytecodes in it. Then you can run this file by typing "java Example" in the same terminal.
+
+4. What is a JAR file?
+JAR stands for Java ARchive, which is a file format based on the ZIP file format. It is used to aggregate many
+Java class files and associated files (e.g images and sounds) into one file.
+
+5. How do you declare the starting point of a Java application?
+You can either declare the starting point by running a class which has a "main" method declared public and static.
+The main method must not return any value, and it must accept a String array as a parameter.
+Or if you are using a JAR file you can provide the "Main-class" header in the manifest with the classname.
+
+6. What is a package? Why is important to declare classes inside packages?
+A package is a technique for organizing java classes. Namespaces are called packages in Java. The classes within
+a package are related to each other in some way, like performing a specific set of tasks. If you dont declare classes
+within a package they will be declared in an unnamed package and cannot be imported by any other class. Another good
+thing about using packages is that several developers can work on the same project without having issues with name
+collisions since they are working in different packages.
+
+7. What is an interface? Why is it important to not change them?
+An interface is an abstract type that the developer use to specify a behaviour that a class must implement. It is
+important to not change an interface because all classes that implemented the interface will break.
+
+8. Which visibility levels are available in Java? What is the default visibility for classes, methods, and fields?
+Public, protected, package and private are all the visibility levels in Java. The default visibility for classes,
+methods and fields is package.
+
+9. In the context of Java, what is an Exception? And what is an Error?
+An error is a subclass of Throwable and it indicates a serious problem (e.g memory error) that the application
+should not try to catch. Exceptions is caused by e.g condition failures and these should be handled at runtime within
+the application.
+
+10. What happened if your program terminates with an OutOfMemoryError, or NoClassDefFoundError, or NullPointerException?
+OutOfMemoryError - will be thrown when the JVM cannot allocate an object due to its out of memory or no more memory could
+be made available by the garbage collector.
+NoClassDefFoundError - Will be thrown if the JVM/classLoader tries to load a class/create a class and no definition
+of the class could be found.
+NullPointerException - will be thrown when the application attempts to use null in the case where an object is required
+
+11. How do you handle Exceptions in your program?
+You can handle exceptions within the application by using a try-catch method which will catch the exception if an
+exceptions is thrown.
+
+12. Why is it important to test your code/application/product, before you deliver it to your customer/boss/teacher?
+To ensure the receiver of the product that all the functionality is working but also to ensure there are no bugs and
+to see if the program is stable.
+
+13. What is JavaDoc? How do you write documentation with it?
+JavaDoc is a tool which comes with the JDK and it´s used to generate documentation to the code. You write the
+documentation within this comment:
+/**
+* Documentation in here..
+* You can even use doc tags like:
+* @author  Zara Ali
+* @version 1.0
+* @since   2014-03-31
+*/
