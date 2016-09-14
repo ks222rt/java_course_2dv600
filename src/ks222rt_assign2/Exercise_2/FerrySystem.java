@@ -1,5 +1,7 @@
 package ks222rt_assign2.Exercise_2;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -28,7 +30,7 @@ public class FerrySystem implements Ferry {
     // Used vehicle space. One car is 1.
     @Override
     public int countVehicleSpace() {
-        return (int)Math.ceil(carSize);
+        return (int)Math.ceil((double)Math.round(carSize * 10d) / 10d);
     }
 
     // Earned money
@@ -76,7 +78,7 @@ public class FerrySystem implements Ferry {
     // true if we can embark vehicle v
     @Override
     public boolean hasSpaceFor(Vehicle v) {
-        if ((carSize + v.getSpace()) <= TOTAL_NUMBERS_OF_CARS && !carList.contains(v)){
+        if (((Math.round(carSize * 10d) / 10d) + v.getSpace()) <= TOTAL_NUMBERS_OF_CARS && !carList.contains(v)){
             return true;
         }
         return false;

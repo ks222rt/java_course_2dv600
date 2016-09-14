@@ -76,5 +76,12 @@ public class FerryMain {
         ferrySystem.disembark();
         System.out.println("Disembarked the ferry");
         System.out.println(ferrySystem.getInformationAboutSizePassengerMoney());
+
+        for (int i = 0; i < 200; i++){
+            Bicycle b = new Bicycle(1);
+            ferrySystem.embark(b);
+        }
+        System.out.println(ferrySystem.getInformationAboutSizePassengerMoney());
+        System.out.println(ferrySystem.toString());
     }
 }
