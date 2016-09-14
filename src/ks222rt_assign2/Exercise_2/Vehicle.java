@@ -10,9 +10,7 @@ public abstract class Vehicle {
     protected double space;
     protected int fee;
     protected int feeForPassengers;
-    protected String regNr;
-
-//    protected ArrayList<Passenger> listOfPassengers = new ArrayList<>();
+    protected String type;
 
     protected boolean rightAmountOfPassengers(int aPassengers, int max){
         if (aPassengers <= max){
@@ -26,7 +24,7 @@ public abstract class Vehicle {
     }
 
     public int getFeeForPassengers(){
-        return this.feeForPassengers * getAmountPassengers();
+        return this.feeForPassengers;
     }
 
     public int getFee(){
@@ -37,7 +35,8 @@ public abstract class Vehicle {
         return this.space;
     }
 
-//    protected void addPassenger(Passenger p){
-//        this.listOfPassengers.add(p);
-//    }
+    public String getType(){
+        return this.type;
+    }
+
 }
