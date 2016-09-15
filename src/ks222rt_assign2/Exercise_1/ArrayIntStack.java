@@ -40,7 +40,7 @@ public class ArrayIntStack extends AbstractIntCollection implements IntStack {
             size--;
             return temp;
         }else{
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Array is empty, cant remove object");
         }
     }
 
@@ -50,7 +50,7 @@ public class ArrayIntStack extends AbstractIntCollection implements IntStack {
         if (!isEmpty()){
             return values[0];
         }else{
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Array is empty, cant remove object");
         }
     }
 }

@@ -33,7 +33,7 @@ public class ArrayIntList extends AbstractIntCollection implements IntList{
             }
             size++;
         }else{
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index is out of the arrays size");
         }
     }
 
@@ -46,7 +46,7 @@ public class ArrayIntList extends AbstractIntCollection implements IntList{
             }
             size--;
         }else{
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index is out of the arrays size");
         }
     }
 
@@ -56,7 +56,7 @@ public class ArrayIntList extends AbstractIntCollection implements IntList{
         if (checkIndex(index, size)) {
             return values[index];
         }else{
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index is out of the arrays size");
         }
     }
 
