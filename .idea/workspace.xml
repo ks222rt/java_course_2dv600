@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b938a16-98d4-43fa-a186-0878e13224ab" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_3/ArrayIntListTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_3/ArrayIntListTest.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_3/ArrayIntListTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2DV600.iml" afterPath="$PROJECT_DIR$/2DV600.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_1/ArrayIntList.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_1/ArrayIntList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_1/ArrayIntStack.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_1/ArrayIntStack.java" />
-    </list>
+    <list default="true" id="4b938a16-98d4-43fa-a186-0878e13224ab" name="Default" comment="" />
     <ignored path="2DV600.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,9 +26,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit3 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit3 Test Class" />
         <option value="JUnit4 Test Class" />
       </list>
     </option>
@@ -51,9 +44,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ks222rt_assign1/CountDigits.java" />
-        <option value="$PROJECT_DIR$/src/ks222rt_assign1/HighLow.java" />
-        <option value="$PROJECT_DIR$/src/ks222rt_assign1/Diamond.java" />
         <option value="$PROJECT_DIR$/assets/test.txt" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign1/Arrayss.java" />
         <option value="$PROJECT_DIR$/assets/numbers.txt" />
@@ -102,6 +92,9 @@
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_1/ArrayIntStack.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_3/ArrayIntStackTest.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_3/ArrayIntListTest.java" />
+        <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_4/QueueInterface.java" />
+        <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_4/Queue.java" />
+        <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_4/QueueTest.java" />
       </list>
     </option>
   </component>
@@ -198,7 +191,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Exercise_3" />
+              <option name="myItemId" value="Exercise_4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -216,11 +209,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ks222rt_assign2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exercise_1" />
+              <option name="myItemId" value="ks222rt_assign1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -254,6 +243,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ks222rt_assign2.Exercise_4" />
       <recent name="ks222rt_assign2.Exercise_3" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
@@ -270,27 +260,7 @@
       <recent name="C:\Users\Kristoffer\workspace\java_courses\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArrayIntListTest">
-    <configuration default="false" name="FerryMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ks222rt_assign2.Exercise_2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="ks222rt_assign2.Exercise_2.FerryMain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="2DV600" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.QueueTest">
     <configuration default="false" name="ArrayIntListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -381,6 +351,32 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ks222rt_assign2.Exercise_3" />
       <option name="MAIN_CLASS_NAME" value="ks222rt_assign2.Exercise_3.ArrayIntStackTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="QueueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ks222rt_assign2.Exercise_4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="2DV600" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ks222rt_assign2.Exercise_4" />
+      <option name="MAIN_CLASS_NAME" value="ks222rt_assign2.Exercise_4.QueueTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -810,19 +806,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.FerryMain" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest.addAt" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest.get" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayIntStackTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest.addAt" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest.get" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayIntStackTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.QueueTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayIntStackTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest.get" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest.addAt" />
-        <item index="4" class="java.lang.String" itemvalue="Application.FerryMain" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.QueueTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayIntStackTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest.get" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest.addAt" />
       </list>
     </recent_temporary>
   </component>
@@ -855,44 +851,44 @@
       <workItem from="1473777714387" duration="5609000" />
       <workItem from="1473850482027" duration="9898000" />
       <workItem from="1473861824918" duration="2235000" />
-      <workItem from="1473929505996" duration="14024000" />
+      <workItem from="1473929505996" duration="21062000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArrayIntListTest - 2016.09.15 at 15h 05m 20s.xml">
-      <configuration name="ArrayIntListTest" configurationId="JUnit" />
+    <history-entry file="QueueTest - 2016.09.15 at 16h 34m 50s.xml">
+      <configuration name="QueueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayIntStackTest - 2016.09.15 at 14h 48m 29s.xml">
-      <configuration name="ArrayIntStackTest" configurationId="JUnit" />
+    <history-entry file="QueueTest - 2016.09.15 at 16h 35m 54s.xml">
+      <configuration name="QueueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayIntStackTest - 2016.09.15 at 14h 49m 32s.xml">
-      <configuration name="ArrayIntStackTest" configurationId="JUnit" />
+    <history-entry file="QueueTest - 2016.09.15 at 16h 39m 46s.xml">
+      <configuration name="QueueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayIntStackTest - 2016.09.15 at 14h 52m 31s.xml">
-      <configuration name="ArrayIntStackTest" configurationId="JUnit" />
+    <history-entry file="QueueTest - 2016.09.15 at 16h 40m 01s.xml">
+      <configuration name="QueueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayIntStackTest - 2016.09.15 at 14h 53m 23s.xml">
-      <configuration name="ArrayIntStackTest" configurationId="JUnit" />
+    <history-entry file="QueueTest - 2016.09.15 at 16h 44m 17s.xml">
+      <configuration name="QueueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayIntStackTest - 2016.09.15 at 14h 55m 22s.xml">
-      <configuration name="ArrayIntStackTest" configurationId="JUnit" />
+    <history-entry file="QueueTest - 2016.09.15 at 16h 46m 25s.xml">
+      <configuration name="QueueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayIntStackTest - 2016.09.15 at 14h 56m 21s.xml">
-      <configuration name="ArrayIntStackTest" configurationId="JUnit" />
+    <history-entry file="QueueTest - 2016.09.15 at 16h 46m 35s.xml">
+      <configuration name="QueueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayIntStackTest - 2016.09.15 at 14h 57m 14s.xml">
-      <configuration name="ArrayIntStackTest" configurationId="JUnit" />
+    <history-entry file="QueueTest - 2016.09.15 at 16h 47m 42s.xml">
+      <configuration name="QueueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayIntStackTest - 2016.09.15 at 14h 57m 42s.xml">
-      <configuration name="ArrayIntStackTest" configurationId="JUnit" />
+    <history-entry file="QueueTest - 2016.09.15 at 16h 48m 18s.xml">
+      <configuration name="QueueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayIntStackTest - 2016.09.15 at 14h 59m 27s.xml">
-      <configuration name="ArrayIntStackTest" configurationId="JUnit" />
+    <history-entry file="QueueTest - 2016.09.15 at 17h 00m 34s.xml">
+      <configuration name="QueueTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135497000" />
+    <option name="totallyTimeSpent" value="142535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="-8" width="1696" height="1026" extended-state="6" />
@@ -906,11 +902,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27510917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27510917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1172619" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1172619" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -961,21 +957,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/function/IntConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/numbers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/1234567891011.dat.url" />
     <entry file="file://$PROJECT_DIR$/src/ks222rt_assign1/test.txt" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1166,20 +1147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign1/Exercise_14/Queue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="114" column="36" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign1/Exercise_14/QueueMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="117" column="33" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_2/Ferry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1324,6 +1291,69 @@
             <element signature="method#get#0;class#ArrayIntListTest#0" expanded="false" />
             <element signature="method#indexOf#0;class#ArrayIntListTest#0" expanded="false" />
             <element signature="method#build#0;class#ArrayIntListTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_4/QueueInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="82" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign1/Exercise_14/QueueMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="959">
+          <caret line="117" column="33" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign1/Exercise_14/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="959">
+          <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+          <folding>
+            <element signature="method#enqueue#0;class#Queue#0" expanded="false" />
+            <element signature="method#contains#0;class#Queue#0" expanded="false" />
+            <element signature="class#ListIterator#0;class#Queue#0" expanded="false" />
+            <element signature="class#Node#0;class#Queue#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_4/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <folding>
+            <element signature="method#enqueue#0;class#Queue#0" expanded="false" />
+            <element signature="method#dequeue#0;class#Queue#0" expanded="false" />
+            <element signature="method#first#0;class#Queue#0" expanded="false" />
+            <element signature="method#last#0;class#Queue#0" expanded="false" />
+            <element signature="class#Node#0;class#Queue#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_4/QueueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="207" column="5" selection-start-line="207" selection-start-column="5" selection-end-line="207" selection-end-column="5" />
+          <folding>
+            <element signature="method#setUp#0;class#QueueTest#0" expanded="false" />
+            <element signature="method#tearDown#0;class#QueueTest#0" expanded="false" />
+            <element signature="method#size#0;class#QueueTest#0" expanded="false" />
+            <element signature="method#isEmpty#0;class#QueueTest#0" expanded="false" />
+            <element signature="method#enqueue#0;class#QueueTest#0" expanded="false" />
+            <element signature="method#dequeue#0;class#QueueTest#0" expanded="false" />
+            <element signature="method#first#0;class#QueueTest#0" expanded="false" />
+            <element signature="method#last#0;class#QueueTest#0" expanded="false" />
+            <element signature="method#iterator#0;class#QueueTest#0" expanded="false" />
+            <element signature="method#buildInt#0;class#QueueTest#0" expanded="false" />
+            <element signature="method#buildString#0;class#QueueTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
