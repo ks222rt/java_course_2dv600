@@ -22,18 +22,15 @@ public class Word implements Comparable<Word> {
 
     @Override
     public boolean equals(Object other){
-        if (other instanceof Word){
-            return toLowerCase(this.word).equals(toLowerCase(other.toString()));
+        if (other instanceof Word) {
+            Word otherWord = (Word) other;
+            return word.equals(otherWord.word);
         }
-        return false;
+        return false ;
     }
 
     @Override
     public int compareTo(Word o) {
-        return this.hashCode() - o.hashCode();
-    }
-
-    private String toLowerCase(String str){
-        return str.toLowerCase();
+        return word.compareToIgnoreCase(o.toString());
     }
 }
