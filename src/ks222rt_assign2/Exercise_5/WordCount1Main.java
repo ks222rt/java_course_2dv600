@@ -18,6 +18,7 @@ public class WordCount1Main {
                 Scanner scan = new Scanner(new File(fileName));
 
                 while(scan.hasNext()){
+
                     String word = scan.next().toLowerCase();
                     if (!word.isEmpty()){
                         if (hashSet.add(new Word(word.toLowerCase()))){
@@ -26,13 +27,13 @@ public class WordCount1Main {
                     }
                 }
 
-                System.out.println("HashSet size = " + hashSet.size());
-                System.out.println("TreeSet size = " + treeSet.size());
-
                 Iterator it = treeSet.iterator();
                 while(it.hasNext()){
                     System.out.println(it.next());
                 }
+
+                System.out.println("HashSet size = " + hashSet.size());
+                System.out.println("TreeSet size = " + treeSet.size());
 
             } catch (FileNotFoundException e) {
                 e.printStackTrace();

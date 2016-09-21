@@ -13,9 +13,12 @@ public class TreeWordSet implements WordSet {
     @Override
     public void add(Word word) {
         if (root == null){
-            root = new BST(null, word);
+            root = new BST(word);
         }
         else{
+            if(root.contains(word)){
+                return;
+            }
             root.add(word);
         }
         size++;
@@ -39,37 +42,54 @@ public class TreeWordSet implements WordSet {
     }
 
     private class bstIterator implements Iterator<Word>{
-        private BST top = root;
-        private BST current = root;
-        private BST bottomLeft = null;
-        private boolean notEmpty = true;
+        private BST next = root;
+
+        public bstIterator(){
+            while(next.left != null){
+                next = next.left;
+            }
+        }
 
         @Override
         public boolean hasNext() {
-            return notEmpty || top.parent != null;
+            return next != null;
         }
 
         @Override
         public Word next() {
-            if (current.left != null){
-                current = current.left;
-                next();
+            // Solution from http://stackoverflow.com/questions/12850889/in-order-iterator-for-binary-tree
+            // Cannot take credit for it
+
+
+            // Set return Bst before looking for next
+            BST bst = next;
+
+            // If next has a right child go to it
+            if (next.right != null){
+                next = next.right;
+
+                // While parent got a left child go to it and then return BST
+                while(next.left != null){
+                    next = next.left;
+                }
+                return bst.word;
             }else{
-                Word temp = current.word;
-                current.left = null;
-                return current.word;
+                // While true aint good, but it has 2 break points so it wont be an infinity loop.
+                while(true){
+                    // If next doesn´t have a parent then everything is done
+                    if (next.parent == null){
+                        next = null;
+                        return bst.word;
+                    }
+                    // If present next is the same as next parents left, than you are at the far most left child in
+                    // that part and then you say next will be nexts parent which means you are going up one step.
+                    if (next.parent.left == next){
+                        next = next.parent;
+                        return bst.word;
+                    }
+                    next = next.parent;
+                }
             }
-
-            if(current.right != null){
-                current = current.right;
-                next();
-            }else{
-                return current.word;
-            }
-
-
-
-            return null;
         }
     }
 
@@ -80,21 +100,25 @@ public class TreeWordSet implements WordSet {
         private BST left = null;
         private BST right = null;
 
+        public BST(Word val){
+            word = val;
+        }
+
         public BST(BST par, Word val){
             parent = par;
             word = val;
         }
 
         public void add(Word val){
-            if (word.compareTo(val) < 0){
+            if (word.compareTo(val) > 0){
                 if (left == null){
-                    left = new BST(parent, val);
+                    left = new BST(this, val);
                 }else{
                     left.add(val);
                 }
-            }else if (word.compareTo(val) > 0){
+            }else if (word.compareTo(val) < 0){
                 if (right == null){
-                    right = new BST(parent, val);
+                    right = new BST(this, val);
                 }else{
                     right.add(val);
                 }
@@ -102,13 +126,13 @@ public class TreeWordSet implements WordSet {
         }
 
         public boolean contains(Word val){
-            if (word.compareTo(val) < 0){
+            if (word.compareTo(val) > 0){
                 if (left == null){
                     return false;
                 }else{
                     return left.contains(val);
                 }
-            }else if (word.compareTo(val) > 0){
+            }else if (word.compareTo(val) < 0){
                 if (right == null){
                     return false;
                 }else{
@@ -117,36 +141,5 @@ public class TreeWordSet implements WordSet {
             }
             return true;
         }
-
-//        public BST remove(Word val){
-//            if (word.compareTo(val) < 0){
-//                if (left != null){
-//                    left = left.remove(val);
-//                }
-//            }else if (word.compareTo(val) > 0){
-//                if (right != null){
-//                    right = right.remove(val);
-//                }
-//            }else{
-//                if (left == null){
-//                    return right;
-//                }else if (right == null){
-//                    return left;
-//                }else{
-//                    if (right.left == null){
-//                        word = right.word;
-//                        right = right.right;
-//                    }else{
-//                        // Kommer till denna sen!
-//                        word = right.delete_min();
-//                    }
-//                }
-//            }
-//        }
-//
-//        public Word delete_min(){
-//            return null;
-//        }
-
     }
 }
