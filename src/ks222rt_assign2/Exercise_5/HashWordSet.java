@@ -82,8 +82,6 @@ public class HashWordSet implements WordSet{
 
     private class hashIterator implements Iterator<Word>{
         private Node next;
-        private Word val;
-        private int pos = 0;
 
         public hashIterator(){
             for (Node node : buckets){

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b938a16-98d4-43fa-a186-0878e13224ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/Word.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/Word.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/WordCount1Main.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/WordCount1Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/HashWordSet.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/HashWordSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/WordCount1Main.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/WordCount1Main.java" />
     </list>
     <ignored path="2DV600.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,14 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TreeWordSet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java">
+      <file leaf-file-name="HashWordSet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/HashWordSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <element signature="method#add#0;class#TreeWordSet#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="383">
+              <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,9 +106,9 @@
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/IdentifyWordsMain.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/WordCount1Main.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/Word.java" />
-        <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/HashWordSet.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/WordCount2Main.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java" />
+        <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/HashWordSet.java" />
       </list>
     </option>
   </component>
@@ -212,28 +206,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Exercise_5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2DV600" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java_courses" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ks222rt_assign2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exercise_4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -867,7 +839,7 @@
       <workItem from="1473861824918" duration="2235000" />
       <workItem from="1473929505996" duration="21771000" />
       <workItem from="1474359832228" duration="19299000" />
-      <workItem from="1474452179106" duration="17158000" />
+      <workItem from="1474452179106" duration="17448000" />
     </task>
     <servers />
   </component>
@@ -904,7 +876,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179701000" />
+    <option name="totallyTimeSpent" value="179991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1334,23 +1306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/HashWordSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding>
-            <element signature="e#1658#1659#0" expanded="true" />
-            <element signature="e#1685#1686#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
-            <element signature="e#1774#1775#0" expanded="true" />
-            <element signature="e#2177#2178#0" expanded="true" />
-            <element signature="e#2220#2221#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
-            <element signature="e#2968#2969#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/WordCount2Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="604">
@@ -1363,11 +1318,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="method#add#0;class#TreeWordSet#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/HashWordSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
