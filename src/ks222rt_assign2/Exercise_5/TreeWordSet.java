@@ -42,53 +42,47 @@ public class TreeWordSet implements WordSet {
     }
 
     private class bstIterator implements Iterator<Word>{
-        private BST next = root;
+        private BST node = root;
 
         public bstIterator(){
-            while(next.left != null){
-                next = next.left;
+            while(node.left != null){
+                node = node.left;
             }
         }
 
         @Override
         public boolean hasNext() {
-            return next != null;
+            return node != null;
         }
 
         @Override
         public Word next() {
-            // Solution from http://stackoverflow.com/questions/12850889/in-order-iterator-for-binary-tree
-            // Cannot take credit for it but change some of the contents
+            // Set return Bst before looking for node
+            BST bst = node;
 
-
-            // Set return Bst before looking for next
-            BST bst = next;
-
-            // If next has a right child go to it
-            if (next.right != null){
-                next = next.right;
+            // If node has a right child go to it
+            if (node.right != null){
+                node = node.right;
 
                 // While parent got a left child go to it and then return BST
-                while(next.left != null){
-                    next = next.left;
+                while(node.left != null){
+                    node = node.left;
                 }
 
                 return bst.word;
             }else{
-                // Removed "true" statement in the while loop to prevent infinity loop
-                // Now it will break out if the parent is null and set next to null and return the last object.
-                while(next.parent != null){
-
-                    // If present next is the same as next parents left, than you are at the far most left child in
-                    // that part and then you say next will be nexts parent which means you are going up one step.
-                    if (next.parent.left == next){
-                        next = next.parent;
+                // It will break out if the parent is null and set node to null and return the last object.
+                while(node.parent != null){
+                    // If present node is the same as node parents left, than you are at the far most left child in
+                    // that part and then you set so the node will be nodes parent which means you are going up one step.
+                    if (node.parent.left == node){
+                        node = node.parent;
                         return bst.word;
                     }
-                    next = next.parent;
+                    node = node.parent;
                 }
 
-                next = null;
+                node = null;
                 return bst.word;
 
             }

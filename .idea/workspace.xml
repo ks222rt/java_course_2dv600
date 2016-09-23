@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b938a16-98d4-43fa-a186-0878e13224ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/HashWordSet$Node.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/HashWordSet$Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/HashWordSet$hashIterator.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/HashWordSet$hashIterator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/TreeWordSet$BST.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/TreeWordSet$BST.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/TreeWordSet$bstIterator.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign2/Exercise_5/TreeWordSet$bstIterator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_3/ArrayIntListTest.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_3/ArrayIntListTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_3/ArrayIntStackTest.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_3/ArrayIntStackTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/HashWordSet.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/HashWordSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/IdentifyWordsMain.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/IdentifyWordsMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java" />
     </list>
     <ignored path="2DV600.iws" />
@@ -32,7 +24,22 @@
     <favorites_list name="2DV600" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="TreeWordSet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding>
+                <element signature="method#add#0;class#TreeWordSet#0" expanded="false" />
+                <element signature="method#bstIterator#0;class#bstIterator#0;class#TreeWordSet#0" expanded="false" />
+                <element signature="class#BST#0;class#TreeWordSet#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -102,10 +109,10 @@
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/Word.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/WordCount2Main.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/IdentifyWordsMain.java" />
-        <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/HashWordSet.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_3/ArrayIntStackTest.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_3/ArrayIntListTest.java" />
+        <option value="$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java" />
       </list>
     </option>
   </component>
@@ -146,11 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Tests" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -166,6 +168,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Java_course_2DV600" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2DV600" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Java_course_2DV600" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -200,6 +216,14 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ks222rt_assign2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exercise_5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -217,6 +241,11 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Tests" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,8 +260,8 @@
       <recent name="ks222rt_assign2.Exercise_4" />
       <recent name="ks222rt_assign2.Exercise_3" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ks222rt_assign1.Exercise_14" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kristoffer\workspace\java_courses\assets" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kristoffer\workspace\java_courses\assets" />
@@ -241,35 +270,69 @@
       <recent name="" />
       <recent name="junit.framework.TestCase" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Kristoffer\workspace\java_courses\assets" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ks222rt_assign1.Exercise_14" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CollectionMain">
-    <configuration default="false" name="ArrayIntListTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.WordCount2Main">
+    <configuration default="false" name="FerryMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ks222rt_assign2.Exercise_3.*" />
+          <option name="PATTERN" value="ks222rt_assign2.Exercise_2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="2DV600" />
+      <option name="MAIN_CLASS_NAME" value="ks222rt_assign2.Exercise_2.FerryMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ks222rt_assign2.Exercise_3" />
-      <option name="MAIN_CLASS_NAME" value="ks222rt_assign2.Exercise_3.ArrayIntListTest" />
-      <option name="METHOD_NAME" value="get" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
+      <module name="2DV600" />
       <envs />
-      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CollectionMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ks222rt_assign2.Exercise_1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="ks222rt_assign2.Exercise_1.CollectionMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="2DV600" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="WordCount2Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ks222rt_assign2.Exercise_5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="ks222rt_assign2.Exercise_5.WordCount2Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="G:\Java_course_2DV600\src\ks222rt_assign2\Exercise_5\Words.txt" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="2DV600" />
+      <envs />
       <method />
     </configuration>
     <configuration default="false" name="ArrayIntListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -322,46 +385,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="FerryMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ks222rt_assign2.Exercise_2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="ks222rt_assign2.Exercise_2.FerryMain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="2DV600" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="CollectionMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ks222rt_assign2.Exercise_1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="ks222rt_assign2.Exercise_1.CollectionMain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="2DV600" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -779,19 +802,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest.get" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayIntStackTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.FerryMain" />
-      <item index="4" class="java.lang.String" itemvalue="Application.CollectionMain" />
+      <item index="0" class="java.lang.String" itemvalue="Application.FerryMain" />
+      <item index="1" class="java.lang.String" itemvalue="Application.CollectionMain" />
+      <item index="2" class="java.lang.String" itemvalue="Application.WordCount2Main" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayIntStackTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.CollectionMain" />
-        <item index="1" class="java.lang.String" itemvalue="Application.FerryMain" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayIntStackTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest.get" />
+        <item index="0" class="java.lang.String" itemvalue="Application.WordCount2Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.CollectionMain" />
+        <item index="2" class="java.lang.String" itemvalue="Application.FerryMain" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayIntStackTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayIntListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -827,7 +850,8 @@
       <workItem from="1473929505996" duration="21771000" />
       <workItem from="1474359832228" duration="19299000" />
       <workItem from="1474452179106" duration="17448000" />
-      <workItem from="1474640995994" duration="2372000" />
+      <workItem from="1474640995994" duration="2435000" />
+      <workItem from="1474654715618" duration="404000" />
     </task>
     <servers />
   </component>
@@ -864,11 +888,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182363000" />
+    <option name="totallyTimeSpent" value="182830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -877,13 +901,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30232558" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30232558" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4651163" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -894,7 +919,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1189,32 +1213,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-          <folding>
-            <element signature="method#add#0;class#TreeWordSet#0" expanded="false" />
-            <element signature="method#bstIterator#0;class#bstIterator#0;class#TreeWordSet#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/WordCount1Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/WordCount2Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1238,13 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="687">
           <caret line="88" column="23" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="23" />
-          <folding>
-            <element signature="method#enqueue#0;class#Queue#0" expanded="false" />
-            <element signature="method#dequeue#0;class#Queue#0" expanded="false" />
-            <element signature="method#first#0;class#Queue#0" expanded="false" />
-            <element signature="method#last#0;class#Queue#0" expanded="false" />
-            <element signature="class#Node#0;class#Queue#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1272,12 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="138" column="46" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
-          <folding>
-            <element signature="method#add#0;class#ArrayIntListTest#0" expanded="false" />
-            <element signature="method#addAt#0;class#ArrayIntListTest#0" expanded="false" />
-            <element signature="method#remove#0;class#ArrayIntListTest#0" expanded="false" />
-            <element signature="method#indexOf#0;class#ArrayIntListTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1285,7 +1275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1293,7 +1282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1301,11 +1289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <element signature="method#push#0;class#ArrayIntStackTest#0" expanded="false" />
-            <element signature="method#pop#0;class#ArrayIntStackTest#0" expanded="false" />
-            <element signature="method#peek#0;class#ArrayIntStackTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1323,7 +1306,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1331,7 +1313,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,7 +1320,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
           <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/WordCount2Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_5/TreeWordSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="method#add#0;class#TreeWordSet#0" expanded="false" />
+            <element signature="method#bstIterator#0;class#bstIterator#0;class#TreeWordSet#0" expanded="false" />
+            <element signature="class#BST#0;class#TreeWordSet#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
