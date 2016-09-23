@@ -9,7 +9,7 @@ public class IdentifyWordsMain {
     public static void main(String[] args){
         if  (args[0] != null){
             String fileName = args[0];
-            String newFile = "C:\\Users\\Kristoffer\\workspace\\java_courses\\src\\ks222rt_assign2\\Exercise_5\\Words.txt";
+            String newFile = "Words.txt";
 
             try {
                 String line;

@@ -58,7 +58,7 @@ public class TreeWordSet implements WordSet {
         @Override
         public Word next() {
             // Solution from http://stackoverflow.com/questions/12850889/in-order-iterator-for-binary-tree
-            // Cannot take credit for it
+            // Cannot take credit for it but change some of the contents
 
 
             // Set return Bst before looking for next
@@ -72,15 +72,13 @@ public class TreeWordSet implements WordSet {
                 while(next.left != null){
                     next = next.left;
                 }
+
                 return bst.word;
             }else{
-                // While true aint good, but it has 2 break points so it wont be an infinity loop.
-                while(true){
-                    // If next doesn´t have a parent then everything is done
-                    if (next.parent == null){
-                        next = null;
-                        return bst.word;
-                    }
+                // Removed "true" statement in the while loop to prevent infinity loop
+                // Now it will break out if the parent is null and set next to null and return the last object.
+                while(next.parent != null){
+
                     // If present next is the same as next parents left, than you are at the far most left child in
                     // that part and then you say next will be nexts parent which means you are going up one step.
                     if (next.parent.left == next){
@@ -89,6 +87,10 @@ public class TreeWordSet implements WordSet {
                     }
                     next = next.parent;
                 }
+
+                next = null;
+                return bst.word;
+
             }
         }
     }

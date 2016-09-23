@@ -101,9 +101,12 @@ public class HashWordSet implements WordSet{
         public Word next() {
             Node returnNode = next;
 
+            // checks weather node(next) has a sibling if not..
             if (next.next != null){
                 next = next.next;
             }else{
+
+                // .. look for next node in the bucket
                 for (int i = getBucketNumber(next.value) + 1; i < buckets.length; i++){
                     if (buckets[i] != null){
                         next = buckets[i];
