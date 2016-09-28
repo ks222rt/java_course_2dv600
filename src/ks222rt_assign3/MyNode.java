@@ -50,7 +50,23 @@ public class MyNode<E> extends graphs.Node<E>{
      */
     @Override
     public Iterator<Node<E>> succsOf() {
-        return null;
+        return new succsIterator();
+    }
+
+    private class succsIterator implements Iterator<Node<E>>{
+        private int count = 0;
+
+        @Override
+        public boolean hasNext() {
+            return count < successors.size();
+        }
+
+        @Override
+        public Node<E> next() {
+            Node<E> node =(Node<E>) successors.toArray()[count];
+            count++;
+            return node;
+        }
     }
 
     /**
@@ -80,7 +96,23 @@ public class MyNode<E> extends graphs.Node<E>{
      */
     @Override
     public Iterator<Node<E>> predsOf() {
-        return null;
+        return new predsIterator();
+    }
+
+    private class predsIterator implements Iterator<Node<E>>{
+        private int count = 0;
+
+        @Override
+        public boolean hasNext() {
+            return count < predecessors.size();
+        }
+
+        @Override
+        public Node<E> next() {
+            Node<E> node = (Node<E>) predecessors.toArray()[count];
+            count++;
+            return node;
+        }
     }
 
 
@@ -97,7 +129,7 @@ public class MyNode<E> extends graphs.Node<E>{
      */
     @Override
     protected void removeSucc(Node<E> succ) {
-
+        successors.remove(succ);
     }
 
     /**
@@ -113,7 +145,7 @@ public class MyNode<E> extends graphs.Node<E>{
      */
     @Override
     protected void removePred(Node<E> pred) {
-
+        predecessors.remove(pred);
     }
 
     /**
@@ -122,6 +154,22 @@ public class MyNode<E> extends graphs.Node<E>{
      */
     @Override
     protected void disconnect() {
+        for (Node<E> n : successors){
+            MyNode<E> t = (MyNode<E>) n;
+            if (t.hasPred(this)) {
+                t.removePred(this);
+            }
+        }
 
+        for (Node<E> n : predecessors){
+            MyNode<E> t = (MyNode<E>) n;
+            if (t.hasSucc(this)){
+                t.removeSucc(this);
+            }
+        }
+
+        if (this.hasReflexiveEdges()){
+            this.removeReflexiveEdges();
+        }
     }
 }

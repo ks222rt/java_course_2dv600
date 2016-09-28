@@ -12,6 +12,6 @@ public class MyGML<E> extends graphs.GML<E> {
 
     @Override
     public String toGML() {
-        return null;
+        return graph.toString();
     }
 }

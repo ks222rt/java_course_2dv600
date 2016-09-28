@@ -118,7 +118,25 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public Iterator<Node<E>> iterator() {
-        return null;
+        return new nodeIterator();
+    }
+
+    private class nodeIterator implements Iterator<Node<E>>{
+        private int count = 0;
+
+        @Override
+        public boolean hasNext() {
+            return count < itemToNode.size();
+        }
+
+        @Override
+        public Node<E> next() {
+            Set<E> set = itemToNode.keySet();
+            Object getNode = set.toArray()[count];
+            MyNode<E> node = itemToNode.get(getNode);
+            count++;
+            return node;
+        }
     }
 
     /**
@@ -127,7 +145,23 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public Iterator<Node<E>> heads() {
-        return null;
+        return new headsIterator();
+    }
+
+    private class headsIterator implements Iterator<Node<E>>{
+        private int count = 0;
+
+        @Override
+        public boolean hasNext() {
+            return count < heads.size();
+        }
+
+        @Override
+        public Node<E> next() {
+            Node<E> node = (Node<E>) heads.toArray()[count];
+            count++;
+            return node;
+        }
     }
 
     /**
@@ -145,7 +179,23 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public Iterator<Node<E>> tails() {
-        return null;
+        return new tailsIterator();
+    }
+
+    private class tailsIterator implements Iterator<Node<E>>{
+        private int count = 0;
+
+        @Override
+        public boolean hasNext() {
+            return count < tails.size();
+        }
+
+        @Override
+        public Node<E> next() {
+            Node<E> node = (Node<E>) tails.toArray()[count];
+            count++;
+            return node;
+        }
     }
 
     /**
@@ -163,7 +213,13 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public List<E> allItems() {
-        return null;
+        List<E> nodelist = new ArrayList<>();
+        Iterator it = iterator();
+        while(it.hasNext()){
+            Node<E> temp = (Node<E>) it.next();
+            nodelist.add(temp.item());
+        }
+        return nodelist;
     }
 
     /**
@@ -188,7 +244,19 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public void removeNodeFor(E item) {
+        if (item == null || !itemToNode.containsKey(item)){
+            throw new RuntimeException("Received null as input");
+        }
+        MyNode<E> node = itemToNode.get(item);
 
+        if (node.isHead()){
+            heads.remove(node);
+        }else if(node.isTail()){
+            tails.remove(node);
+        }
+
+        node.disconnect();
+        itemToNode.remove(item);
     }
 
     /**
@@ -222,6 +290,36 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public boolean removeEdgeFor(E from, E to) {
+        if (from == null || to == null){
+            throw new RuntimeException("Received null as input");
+        }
+
+        if (itemToNode.containsKey(from) && itemToNode.containsKey(to)){
+            MyNode<E> src = (MyNode<E>) getNodeFor(from);
+            MyNode<E> tgt = (MyNode<E>) getNodeFor(to);
+
+            if (src.hasSucc(tgt) && tgt.hasPred(src)){
+                src.removeSucc(tgt);
+                tgt.removePred(src);
+
+                if (src.isTail()){
+                    if (!tails.contains(src)){
+                        tails.add(src);
+                    }
+                }
+
+                if (tgt.isHead()){
+                    if (!heads.contains(tgt)){
+                        heads.add(tgt);
+                    }
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
         return false;
     }
 
@@ -232,8 +330,34 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("graph [\n");
+        sb.append("comment This is a sample graph\n");
 
+        Iterator it = iterator();
+        int count = 1;
+        while(it.hasNext()){
+            MyNode<E> node = (MyNode<E>) it.next();
+            sb.append("\nnode \n[\n");
+            sb.append("id " + node.item());
+            sb.append("\nlabel node" + count++);
+            sb.append("\n]");
+        }
 
-        return "";
+        Iterator newIT = iterator();
+
+        while(newIT.hasNext()){
+            MyNode<E> node = (MyNode<E>) newIT.next();
+            Iterator nit = node.succsOf();
+            while(nit.hasNext()){
+                sb.append("\nedge \n[");
+                MyNode<E> n = (MyNode<E>) nit.next();
+                sb.append("\nsource " + node);
+                sb.append("\ntarget " + n);
+                sb.append("\nlabel 'Edge from node " + node + " to node " + n);
+                sb.append("\n]");
+            }
+        }
+        return sb.toString();
     }
 }
