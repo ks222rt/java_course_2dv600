@@ -331,17 +331,19 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append("graph [\n");
-        sb.append("comment This is a sample graph\n");
+        Map<Node<E>, Integer> map = new HashMap<>();
 
+        sb.append("graph [\n");
         Iterator it = iterator();
-        int count = 1;
+        int count = 0;
         while(it.hasNext()){
             MyNode<E> node = (MyNode<E>) it.next();
-            sb.append("\nnode \n[\n");
-            sb.append("id " + node.item());
-            sb.append("\nlabel node" + count++);
-            sb.append("\n]");
+            map.put(node, count);
+            sb.append("\n\tnode [\n");
+            sb.append("\t\tid " + count);
+            sb.append("\n\t\tlabel " + "\"" + node.item() + "\"");
+            sb.append("\n\t]");
+            count++;
         }
 
         Iterator newIT = iterator();
@@ -350,14 +352,16 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
             MyNode<E> node = (MyNode<E>) newIT.next();
             Iterator nit = node.succsOf();
             while(nit.hasNext()){
-                sb.append("\nedge \n[");
+                sb.append("\n\tedge [");
                 MyNode<E> n = (MyNode<E>) nit.next();
-                sb.append("\nsource " + node);
-                sb.append("\ntarget " + n);
-                sb.append("\nlabel 'Edge from node " + node + " to node " + n);
-                sb.append("\n]");
+                sb.append("\n\t\tsource " + map.get(node));
+                sb.append("\n\t\ttarget " + map.get(n));
+                //sb.append("\n\t\tlabel \"Edge from node " + node + " to node " + n + "\"");
+                sb.append("\n\t]");
             }
         }
+
+        sb.append("\n]");
         return sb.toString();
     }
 }

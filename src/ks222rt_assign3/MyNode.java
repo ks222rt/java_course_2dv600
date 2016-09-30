@@ -13,7 +13,6 @@ public class MyNode<E> extends graphs.Node<E>{
     private Set<Node<E>> successors = new HashSet<>();
     private Set<Node<E>> predecessors = new HashSet<>();
 
-
     /**
      * Constructs a new node using <tt>item</tt> as key.
      *
@@ -55,6 +54,7 @@ public class MyNode<E> extends graphs.Node<E>{
 
     private class succsIterator implements Iterator<Node<E>>{
         private int count = 0;
+        Object[] nodeArray = successors.toArray();
 
         @Override
         public boolean hasNext() {
@@ -63,7 +63,7 @@ public class MyNode<E> extends graphs.Node<E>{
 
         @Override
         public Node<E> next() {
-            Node<E> node =(Node<E>) successors.toArray()[count];
+            Node<E> node =(Node<E>) nodeArray[count];
             count++;
             return node;
         }
@@ -172,4 +172,5 @@ public class MyNode<E> extends graphs.Node<E>{
             this.removeReflexiveEdges();
         }
     }
+
 }
