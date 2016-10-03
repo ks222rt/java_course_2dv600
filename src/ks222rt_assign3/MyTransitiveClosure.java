@@ -16,6 +16,13 @@ public class MyTransitiveClosure<E> implements graphs.TransitiveClosure<E> {
      */
     @Override
     public Map<Node<E>, Collection<Node<E>>> computeClosure(DirectedGraph<E> dg) {
+        // trying to get floyd marshall algorithm working
+        // http://stackoverflow.com/questions/33856058/transitive-closure-outofmemory
+        // http://www.geeksforgeeks.org/dynamic-programming-set-16-floyd-warshall-algorithm/
+        // http://www.sanfoundry.com/java-program-warshall-algorithm/
+        // http://www.sanfoundry.com/java-program-find-transitive-closure-graph/
+        // https://www.cs.rochester.edu/~nelson/courses/csc_173/graphs/tc.html
+
         LinkedList<Node<E>> nodeConnection = new LinkedList<>();
         Map<Node<E>, Collection<Node<E>>> map = new HashMap<>();
         List<Node<E>> tempNodeList = new ArrayList<>();

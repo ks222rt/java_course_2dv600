@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b938a16-98d4-43fa-a186-0878e13224ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign3/MyBFS.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign3/MyBFS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign3/MyConnectedComponents.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign3/MyConnectedComponents.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign3/MyTransitiveClosure.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign3/MyTransitiveClosure.java" />
     </list>
     <ignored path="2DV600.iws" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="TestAlgorithms.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graphs/test/TestAlgorithms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="612">
               <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="method#main#0;class#TestAlgorithms#0" expanded="false" />
@@ -46,8 +45,8 @@
       <file leaf-file-name="MyTransitiveClosure.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyTransitiveClosure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+            <state relative-caret-position="381">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,11 +169,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Tests" />
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -868,7 +867,8 @@
       <workItem from="1474981255179" duration="9680000" />
       <workItem from="1475056754923" duration="16000000" />
       <workItem from="1475228840383" duration="16436000" />
-      <workItem from="1475489834555" duration="10503000" />
+      <workItem from="1475489834555" duration="10562000" />
+      <workItem from="1475508107571" duration="77000" />
     </task>
     <servers />
   </component>
@@ -905,7 +905,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235449000" />
+    <option name="totallyTimeSpent" value="235585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -913,13 +913,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32532752" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43340382" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23361522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23361522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -934,6 +933,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32532752" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4650655" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1085,7 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,7 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1117,13 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1404">
           <caret line="318" column="0" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#testRemove#0;class#TestDirectedGraph#0" expanded="false" />
-            <element signature="method#testExceptions#0;class#TestDirectedGraph#0" expanded="false" />
-            <element signature="method#testIterator#0;class#TestDirectedGraph#0" expanded="false" />
-            <element signature="e#11859#11870#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1253,19 +1244,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2516">
           <caret line="325" column="43" selection-start-line="325" selection-start-column="43" selection-end-line="325" selection-end-column="43" />
-          <folding>
-            <element signature="method#getPerformanceGraphs#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#check_remove#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#runDfsBfs#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#getDBFSGraphs#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#runTransitiveClosure#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#getClosureGraphs#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#runConnectedComponents#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="e#8601#8610#0" expanded="false" />
-            <element signature="method#getConnectedGraphs#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#gcMem#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#mem#0;class#GraphBenchmark#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1340,7 +1318,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graphs/test/TestAlgorithms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="612">
           <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#TestAlgorithms#0" expanded="false" />
@@ -1355,8 +1333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyTransitiveClosure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+        <state relative-caret-position="381">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
