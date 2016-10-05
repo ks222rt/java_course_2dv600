@@ -9,6 +9,9 @@ import java.util.*;
  * Created by Kristoffer on 2016-09-27.
  */
 public class MyBFS<E> implements graphs.BFS<E>{
+    private List<Node<E>> nodeList = new ArrayList<>();
+    private Set<Node<E>> nodeQueue = new HashSet<>();
+    private Set<Node<E>> visitedList = new HashSet<>();
 
     /**
      * Returns the nodes visited by a breadth-first search starting from
@@ -17,29 +20,11 @@ public class MyBFS<E> implements graphs.BFS<E>{
      */
     @Override
     public List<Node<E>> bfs(DirectedGraph<E> graph, Node<E> root) {
-        List<Node<E>> nodeList = new ArrayList<>();
-        Queue<Node<E>> nodeQueue = new LinkedList<>();
-        List<Node<E>> visitedList = new ArrayList<>();
+        nodeList.clear(); nodeQueue.clear(); visitedList.clear();
 
-        nodeQueue.add(graph.getNodeFor(root.item()));
-        visitedList.add(graph.getNodeFor(root.item()));
-
-        while(!nodeQueue.isEmpty()){
-            Node<E> node = nodeQueue.peek();
-
-            Iterator<Node<E>> it = node.succsOf();
-            while(it.hasNext()){
-                Node<E> child = it.next();
-                if (!visitedList.contains(child)){
-                    visitedList.add(child);
-                    nodeQueue.add(child);
-                }
-            }
-
-            node.num = nodeList.size();
-            nodeList.add(node);
-            nodeQueue.remove();
-        }
+        root = graph.getNodeFor(root.item());
+        nodeQueue.add(root);
+        recursiveBFS(nodeQueue, visitedList, nodeList);
 
         return nodeList;
     }
@@ -51,43 +36,41 @@ public class MyBFS<E> implements graphs.BFS<E>{
      */
     @Override
     public List<Node<E>> bfs(DirectedGraph<E> graph) {
-        List<Node<E>> nodeList = new ArrayList<>();
-        Queue<Node<E>> nodeQueue = new LinkedList<>();
-        List<Node<E>> visitedList = new ArrayList<>();
-        int count = 0;
+        nodeList.clear(); nodeQueue.clear(); visitedList.clear();
 
         for (E item : graph.allItems()){
-            BFS(graph.getNodeFor(item), nodeQueue, visitedList, nodeList, count);
+            Node<E> node = graph.getNodeFor(item);
+            if (!visitedList.contains(node)){
+                nodeQueue.add(node);
+                recursiveBFS(nodeQueue, visitedList, nodeList);
+            }
         }
-
-
         return nodeList;
     }
 
-    private void BFS(Node<E> node, Queue<Node<E>> nodeQueue, List<Node<E>> visitedList, List<Node<E>> nodeList, int count){
-        if (!nodeQueue.contains(node) || !visitedList.contains(node)){
-            visitedList.add(node);
-            nodeQueue.add(node);
-        }
+    private void recursiveBFS(Set<Node<E>> nodeQueue, Set<Node<E>> visitedList, List<Node<E>> nodeList){
+        if (!nodeQueue.isEmpty()) {
 
-        while(!nodeQueue.isEmpty()){
-            Node<E> n = nodeQueue.peek();
-            Iterator<Node<E>> it = n.succsOf();
-
+            Iterator<Node<E>> it = nodeQueue.iterator();
+            nodeQueue = new HashSet<>();
             while(it.hasNext()){
-                Node<E> child = it.next();
-                if (!visitedList.contains(child)){
-                    visitedList.add(child);
-                    nodeQueue.add(child);
+                Node<E> node = it.next();
+                if (!nodeList.contains(node)) {
+                    visitedList.add(node);
+                    node.num = nodeList.size();
+                    nodeList.add(node);
+                }
+
+                Iterator<Node<E>> nodeIT = node.succsOf();
+                while(nodeIT.hasNext()){
+                    Node<E> child = nodeIT.next();
+                    if (!visitedList.contains(child)){
+                        nodeQueue.add(child);
+                    }
                 }
             }
 
-            if (!nodeList.contains(node)){
-                node.num = nodeList.size();
-                nodeList.add(node);
-            }
-            nodeQueue.remove();
+            recursiveBFS(nodeQueue, visitedList, nodeList);
         }
-
     }
 }

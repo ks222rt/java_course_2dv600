@@ -3,15 +3,14 @@ package ks222rt_assign3;
 import graphs.DirectedGraph;
 import graphs.Node;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Kristoffer on 2016-09-27.
  */
 public class MyDFS<E> implements graphs.DFS<E> {
+    private List<Node<E>> nodeList = new ArrayList<>();
+    private Set<Node<E>> visitedList = new HashSet<>();
 
     /**
      * Returns the nodes visited by a depth first search starting from
@@ -20,8 +19,10 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> dfs(DirectedGraph<E> graph, Node<E> root) {
-        List<Node<E>> nodeList = new ArrayList<>();
-        dfs(nodeList, graph.getNodeFor(root.item()));
+        nodeList.clear(); visitedList.clear();
+
+        root = graph.getNodeFor(root.item());
+        recursiveDFS(nodeList, root, visitedList);
 
         return nodeList;
     }
@@ -33,10 +34,13 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> dfs(DirectedGraph<E> graph) {
-        List<Node<E>> nodeList = new ArrayList<>();
+        nodeList.clear(); visitedList.clear();
 
         for (E item : graph.allItems()){
-            dfs(nodeList, graph.getNodeFor(item));
+            Node<E> root = graph.getNodeFor(item);
+            if (!visitedList.contains(root)){
+                recursiveDFS(nodeList, root, visitedList);
+            }
         }
 
         return nodeList;
@@ -54,8 +58,8 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> postOrder(DirectedGraph<E> g, Node<E> root) {
-        List<Node<E>> nodeList = new ArrayList<>();
-        List<Node<E>> visitedList = new ArrayList<>();
+        nodeList.clear();
+        visitedList.clear();
         postOrder(visitedList, nodeList, root);
 
         return nodeList;
@@ -71,8 +75,9 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> postOrder(DirectedGraph<E> g) {
-        List<Node<E>> nodeList = new ArrayList<>();
-        List<Node<E>> visitedList = new ArrayList<>();
+        nodeList.clear();
+        visitedList.clear();
+
         for (E item : g.allItems()){
             postOrder(visitedList, nodeList, g.getNodeFor(item));
         }
@@ -112,30 +117,20 @@ public class MyDFS<E> implements graphs.DFS<E> {
     @Override
     public List<Node<E>> topSort(DirectedGraph<E> graph) {
         if (!isCyclic(graph)){
-            List<Node<E>> nodeList = new ArrayList<>();
-            List<Node<E>> visitedList = new ArrayList<>();
-//            List<Node<E>> temp = new ArrayList<>();
-
-
-//            Either do this ugly method or the below
-//            for (E item : graph.allItems()){
-//                postOrder(visitedList, nodeList, graph.getNodeFor(item));
-//            }
-//
-//            for (int i = 0; i < nodeList.size(); i++){
-//                temp.add(nodeList.get(nodeList.size()- 1 - i));
-//            }
+            nodeList.clear();
+            visitedList.clear();
 
             for (E item : graph.allItems()){
-                topologicalSort(visitedList, nodeList, graph.getNodeFor(item));
+                postOrder(visitedList, nodeList, graph.getNodeFor(item));
             }
+            Collections.reverse(nodeList);
 
             return nodeList;
         }
         return null;
     }
 
-    private void topologicalSort(List<Node<E>> visitedList, List<Node<E>> nodeList, Node<E> root){
+    private void topologicalSort(Set<Node<E>> visitedList, List<Node<E>> nodeList, Node<E> root){
         if (!visitedList.contains(root)) {
             visitedList.add(root);
             Iterator it = root.predsOf();
@@ -148,32 +143,51 @@ public class MyDFS<E> implements graphs.DFS<E> {
         }
     }
 
-    private void dfs(List<Node<E>> nodeList, Node<E> root){
-        Node<E> node;
-
-        if (!nodeList.contains(root)) {
+    private void recursiveDFS(List<Node<E>> nodeList, Node<E> root, Set<Node<E>> visitedList){
+        if (!visitedList.contains(root)) {
             root.num = nodeList.size();
             nodeList.add(root);
+            visitedList.add(root);
             Iterator<Node<E>> it = root.succsOf();
             while (it.hasNext()) {
-                node = it.next();
-                dfs(nodeList, node);
+                recursiveDFS(nodeList, it.next(), visitedList);
+            }
+        }
+    }
+
+    private void stackDFS(ArrayDeque<Node<E>> stack, Set<Node<E>> visitedList, List<Node<E>> nodeList, Node<E> root){
+        stack.addFirst(root);
+
+        while(!stack.isEmpty()){
+            Node<E> node = stack.removeFirst();
+            if (!visitedList.contains(node)){
+                node.num = nodeList.size();
+                nodeList.add(node);
+                visitedList.add(node);
+
+                Iterator<Node<E>> it = node.succsOf();
+                while(it.hasNext()){
+                    Node<E> next = it.next();
+                    if (!stack.contains(next) || !visitedList.contains(next)){
+                        stack.addFirst(next);
+                    }
+                }
             }
         }
     }
 
 
-    private void postOrder(List<Node<E>> visited, List<Node<E>> nodeList, Node<E> root){
+    private void postOrder(Set<Node<E>> visited, List<Node<E>> nodeList, Node<E> root){
         // Got help from http://eli.thegreenplace.net/2015/directed-graph-traversal-orderings-and-applications-to-data-flow-analysis/
         if (!visited.contains(root)) {
             visited.add(root);
-            Iterator it = root.succsOf();
+            Iterator<Node<E>> it = root.succsOf();
             while (it.hasNext()) {
-                Node<E> node = (Node<E>) it.next();
-                postOrder(visited, nodeList, node);
+                postOrder(visited, nodeList, it.next());
             }
             root.num = nodeList.size();
             nodeList.add(root);
         }
     }
+
 }

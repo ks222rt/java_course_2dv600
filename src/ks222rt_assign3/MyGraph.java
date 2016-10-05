@@ -131,8 +131,8 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
 
         @Override
         public Node<E> next() {
-            Set<E> set = itemToNode.keySet();
-            Object getNode = set.toArray()[count];
+//            Set<E> set = itemToNode.keySet();
+            Object getNode = itemToNode.keySet().toArray()[count];
             MyNode<E> node = itemToNode.get(getNode);
             count++;
             return node;
