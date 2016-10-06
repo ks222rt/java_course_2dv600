@@ -19,7 +19,7 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> dfs(DirectedGraph<E> graph, Node<E> root) {
-        nodeList.clear(); visitedList.clear();
+        nodeList = new ArrayList<>(); visitedList.clear();
 
         root = graph.getNodeFor(root.item());
         recursiveDFS(nodeList, root, visitedList);
@@ -34,7 +34,7 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> dfs(DirectedGraph<E> graph) {
-        nodeList.clear(); visitedList.clear();
+        nodeList = new ArrayList<>(); visitedList.clear();
 
         for (E item : graph.allItems()){
             Node<E> root = graph.getNodeFor(item);
@@ -58,7 +58,7 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> postOrder(DirectedGraph<E> g, Node<E> root) {
-        nodeList.clear();
+        nodeList = new ArrayList<>();
         visitedList.clear();
         postOrder(visitedList, nodeList, root);
 
@@ -75,7 +75,7 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> postOrder(DirectedGraph<E> g) {
-        nodeList.clear();
+        nodeList = new ArrayList<>();
         visitedList.clear();
 
         for (E item : g.allItems()){
@@ -117,7 +117,7 @@ public class MyDFS<E> implements graphs.DFS<E> {
     @Override
     public List<Node<E>> topSort(DirectedGraph<E> graph) {
         if (!isCyclic(graph)){
-            nodeList.clear();
+            nodeList = new ArrayList<>();
             visitedList.clear();
 
             for (E item : graph.allItems()){

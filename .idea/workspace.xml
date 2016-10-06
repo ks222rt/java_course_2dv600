@@ -3,17 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4b938a16-98d4-43fa-a186-0878e13224ab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/graphs/benchmark/BenchmarkMain.class" afterPath="$PROJECT_DIR$/out/production/2DV600/graphs/benchmark/BenchmarkMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign3/MyBFS.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign3/MyBFS.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign3/MyConnectedComponents.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign3/MyConnectedComponents.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign3/MyDFS.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign3/MyDFS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign3/MyGraph$nodeIterator.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign3/MyGraph$nodeIterator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign3/MyTransitiveClosure.class" afterPath="$PROJECT_DIR$/out/production/2DV600/ks222rt_assign3/MyTransitiveClosure.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/directed_graph_[1].gml" afterPath="$PROJECT_DIR$/directed_graph_[1].gml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign3/MyBFS.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign3/MyBFS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/graphs/benchmark/BenchmarkMain.java" afterPath="$PROJECT_DIR$/src/graphs/benchmark/BenchmarkMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign3/MyConnectedComponents.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign3/MyConnectedComponents.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign3/MyDFS.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign3/MyDFS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign3/MyGraph.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign3/MyGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ks222rt_assign3/MyTransitiveClosure.java" afterPath="$PROJECT_DIR$/src/ks222rt_assign3/MyTransitiveClosure.java" />
     </list>
     <ignored path="2DV600.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,41 +30,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyBFS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyBFS.java">
+      <file leaf-file-name="MyConnectedComponents.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyConnectedComponents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyDFS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyDFS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-963">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="161">
+              <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
               <folding>
-                <element signature="method#postOrder#0;class#MyDFS#0" expanded="false" />
-                <element signature="method#postOrder#1;class#MyDFS#0" expanded="false" />
-                <element signature="method#isCyclic#0;class#MyDFS#0" expanded="false" />
-                <element signature="method#topSort#0;class#MyDFS#0" expanded="false" />
-                <element signature="method#topologicalSort#0;class#MyDFS#0" expanded="false" />
-                <element signature="method#stackDFS#0;class#MyDFS#0" expanded="false" />
-                <element signature="method#postOrder#3;class#MyDFS#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyTransitiveClosure.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyTransitiveClosure.java">
+      <file leaf-file-name="TestAlgorithms.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/graphs/test/TestAlgorithms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            <state relative-caret-position="228">
+              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#setUp#0;class#TestAlgorithms#0" expanded="false" />
+                <element signature="method#testTransitiveClosure#0;class#TestAlgorithms#0" expanded="false" />
+                <element signature="method#check_partitioning#0;class#TestAlgorithms#0" expanded="false" />
+                <element signature="method#check_closure#0;class#TestAlgorithms#0" expanded="false" />
+                <element signature="method#nodes#0;class#TestAlgorithms#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BenchmarkMain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/graphs/benchmark/BenchmarkMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="12" column="65" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphBenchmark.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/graphs/benchmark/GraphBenchmark.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="355" column="58" selection-start-line="355" selection-start-column="58" selection-end-line="355" selection-end-column="58" />
+              <folding>
+                <element signature="method#GraphBenchmark#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#runGraphPerformance#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#getPerformanceGraphs#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#check_graph#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#check_node#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#check_remove#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#getDBFSGraphs#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#runTransitiveClosure#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#getClosureGraphs#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#getConnectedGraphs#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#gcMem#0;class#GraphBenchmark#0" expanded="false" />
+                <element signature="method#mem#0;class#GraphBenchmark#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -146,10 +162,10 @@
         <option value="$PROJECT_DIR$/src/ks222rt_assign3/MyNode.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign3/MyGraph.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign3/MyBFS.java" />
+        <option value="$PROJECT_DIR$/src/ks222rt_assign3/MyTransitiveClosure.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign3/MyDFS.java" />
         <option value="$PROJECT_DIR$/src/graphs/benchmark/BenchmarkMain.java" />
         <option value="$PROJECT_DIR$/src/ks222rt_assign3/MyConnectedComponents.java" />
-        <option value="$PROJECT_DIR$/src/ks222rt_assign3/MyTransitiveClosure.java" />
       </list>
     </option>
   </component>
@@ -190,6 +206,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Tests" />
+      </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -280,13 +301,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2DV600" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Java_course_2DV600" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graphs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="benchmark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Tests" />
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -338,7 +376,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="TestAlgorithms.testTransitiveClosure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestAlgorithms.testConnectedComponents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="graphs.test.*" />
@@ -350,7 +388,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="graphs.test" />
       <option name="MAIN_CLASS_NAME" value="graphs.test.TestAlgorithms" />
-      <option name="METHOD_NAME" value="testTransitiveClosure" />
+      <option name="METHOD_NAME" value="testConnectedComponents" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -362,6 +400,26 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestDirectedGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="graphs.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="graphs.test.TestDirectedGraph" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="2DV600" />
+      <envs />
       <method />
     </configuration>
     <configuration default="false" name="BenchmarkMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -384,56 +442,24 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="TestDFS.testDFS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestAlgorithms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="graphs.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="2DV600" />
+      <option name="MAIN_CLASS_NAME" value="graphs.test.TestAlgorithms" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="graphs.test" />
-      <option name="MAIN_CLASS_NAME" value="graphs.test.TestDFS" />
-      <option name="METHOD_NAME" value="testDFS" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestDFS.testBFS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="graphs.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <module name="2DV600" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="graphs.test" />
-      <option name="MAIN_CLASS_NAME" value="graphs.test.TestDFS" />
-      <option name="METHOD_NAME" value="testBFS" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
       <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -852,18 +878,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.TestDFS" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestAlgorithms.testTransitiveClosure" />
-      <item index="2" class="java.lang.String" itemvalue="Application.BenchmarkMain" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestDFS.testDFS" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestDFS.testBFS" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestAlgorithms.testConnectedComponents" />
+      <item index="2" class="java.lang.String" itemvalue="Application.TestDirectedGraph" />
+      <item index="3" class="java.lang.String" itemvalue="Application.BenchmarkMain" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TestAlgorithms" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.BenchmarkMain" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestDFS" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestDFS.testBFS" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestDFS.testDFS" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestAlgorithms.testTransitiveClosure" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestAlgorithms" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestAlgorithms.testConnectedComponents" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TestDirectedGraph" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestDFS" />
       </list>
     </recent_temporary>
   </component>
@@ -907,44 +933,45 @@
       <workItem from="1475489834555" duration="10562000" />
       <workItem from="1475508107571" duration="110000" />
       <workItem from="1475595455144" duration="4951000" />
-      <workItem from="1475657968391" duration="17208000" />
+      <workItem from="1475657968391" duration="17278000" />
+      <workItem from="1475749400768" duration="14866000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestDFS_testBFS - 2016.10.05 at 15h 12m 18s.xml">
-      <configuration name="TestDFS.testBFS" configurationId="JUnit" />
+    <history-entry file="TestAlgorithms_testConnectedComponents - 2016.10.06 at 16h 03m 29s.xml">
+      <configuration name="TestAlgorithms.testConnectedComponents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDFS_testDFS - 2016.10.05 at 13h 39m 03s.xml">
-      <configuration name="TestDFS.testDFS" configurationId="JUnit" />
+    <history-entry file="TestAlgorithms_testConnectedComponents - 2016.10.06 at 16h 12m 35s.xml">
+      <configuration name="TestAlgorithms.testConnectedComponents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDFS_testDFS - 2016.10.05 at 13h 41m 22s.xml">
-      <configuration name="TestDFS.testDFS" configurationId="JUnit" />
+    <history-entry file="TestAlgorithms_testConnectedComponents - 2016.10.06 at 16h 39m 28s.xml">
+      <configuration name="TestAlgorithms.testConnectedComponents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDFS_testDFS - 2016.10.05 at 13h 42m 14s.xml">
-      <configuration name="TestDFS.testDFS" configurationId="JUnit" />
+    <history-entry file="TestAlgorithms_testConnectedComponents - 2016.10.06 at 16h 40m 41s.xml">
+      <configuration name="TestAlgorithms.testConnectedComponents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDFS_testDFS - 2016.10.05 at 13h 42m 17s.xml">
-      <configuration name="TestDFS.testDFS" configurationId="JUnit" />
+    <history-entry file="TestAlgorithms_testConnectedComponents - 2016.10.06 at 16h 40m 52s.xml">
+      <configuration name="TestAlgorithms.testConnectedComponents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDFS_testDFS - 2016.10.05 at 13h 42m 18s.xml">
-      <configuration name="TestDFS.testDFS" configurationId="JUnit" />
+    <history-entry file="TestAlgorithms_testTransitiveClosure - 2016.10.06 at 15h 51m 45s.xml">
+      <configuration name="TestAlgorithms.testTransitiveClosure" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDFS_testDFS - 2016.10.05 at 13h 42m 19s.xml">
-      <configuration name="TestDFS.testDFS" configurationId="JUnit" />
+    <history-entry file="TestAlgorithms_testTransitiveClosure - 2016.10.06 at 15h 52m 11s.xml">
+      <configuration name="TestAlgorithms.testTransitiveClosure" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDFS_testDFS - 2016.10.05 at 13h 42m 20s.xml">
-      <configuration name="TestDFS.testDFS" configurationId="JUnit" />
+    <history-entry file="TestAlgorithms_testTransitiveClosure - 2016.10.06 at 15h 55m 11s.xml">
+      <configuration name="TestAlgorithms.testTransitiveClosure" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDFS_testDFS - 2016.10.05 at 13h 42m 21s.xml">
-      <configuration name="TestDFS.testDFS" configurationId="JUnit" />
+    <history-entry file="TestAlgorithms_testTransitiveClosure - 2016.10.06 at 16h 03m 32s.xml">
+      <configuration name="TestAlgorithms.testTransitiveClosure" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDFS_testDFS - 2016.10.05 at 13h 42m 22s.xml">
-      <configuration name="TestDFS.testDFS" configurationId="JUnit" />
+    <history-entry file="TestAlgorithms_testTransitiveClosure - 2016.10.06 at 16h 12m 31s.xml">
+      <configuration name="TestAlgorithms.testTransitiveClosure" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257777000" />
+    <option name="totallyTimeSpent" value="272713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -958,16 +985,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43340382" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2716702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43234673" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14895834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40591967" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45560253" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1021,36 +1048,22 @@
           <properties />
           <option name="timeStamp" value="150" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ks222rt_assign3/MyDFS.java</url>
-          <line>99</line>
-          <properties />
-          <option name="timeStamp" value="163" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="174" />
+      <option name="time" value="201" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="reversed" language="JAVA" />
+        <watch expression="((java.util.ArrayList)components).get(3)" custom="java.util.ArrayList" />
+        <watch expression="order.get(9)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_1/ArrayIntList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_3/ArrayIntStackTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ks222rt_assign2/Exercise_2/FerrySystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1123,22 +1136,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_101/src.zip!/java/util/HashMap.java" />
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_101/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class" />
-    <entry file="file://$PROJECT_DIR$/src/graphs/test/GraphGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphs/test/GeneratorMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/graphs/DirectedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1258">
@@ -1152,13 +1150,6 @@
         <state relative-caret-position="219">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphs/test/TestDirectedGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="318" column="0" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1256,7 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,21 +1274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1209#1210#0" expanded="true" />
-            <element signature="e#1408#1409#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="class#predsIterator#0;class#MyNode#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/graphs/test/TestDFS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1306,51 +1281,6 @@
           <folding>
             <element signature="method#testPostOrder#0;class#TestDFS#0" expanded="false" />
             <element signature="method#testCyclic#0;class#TestDFS#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphs/benchmark/GraphBenchmark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1089">
-          <caret line="355" column="0" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
-          <folding>
-            <element signature="method#GraphBenchmark#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#runGraphPerformance#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#getPerformanceGraphs#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#check_graph#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#check_node#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#check_remove#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#getDBFSGraphs#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#runTransitiveClosure#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#getClosureGraphs#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#runConnectedComponents#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#getConnectedGraphs#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#gcMem#0;class#GraphBenchmark#0" expanded="false" />
-            <element signature="method#mem#0;class#GraphBenchmark#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphs/benchmark/BenchmarkMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphs/test/TestAlgorithms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="method#setUp#0;class#TestAlgorithms#0" expanded="false" />
-            <element signature="method#testTransitiveClosure#0;class#TestAlgorithms#0" expanded="false" />
-            <element signature="method#testConnectedComponents#0;class#TestAlgorithms#0" expanded="false" />
-            <element signature="method#check_partitioning#0;class#TestAlgorithms#0" expanded="false" />
-            <element signature="method#check_closure#0;class#TestAlgorithms#0" expanded="false" />
-            <element signature="method#nodes#0;class#TestAlgorithms#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1363,33 +1293,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyDFS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-963">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="method#postOrder#0;class#MyDFS#0" expanded="false" />
-            <element signature="method#postOrder#1;class#MyDFS#0" expanded="false" />
-            <element signature="method#isCyclic#0;class#MyDFS#0" expanded="false" />
-            <element signature="method#topSort#0;class#MyDFS#0" expanded="false" />
-            <element signature="method#topologicalSort#0;class#MyDFS#0" expanded="false" />
-            <element signature="method#stackDFS#0;class#MyDFS#0" expanded="false" />
-            <element signature="method#postOrder#3;class#MyDFS#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyConnectedComponents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyBFS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
+        <state relative-caret-position="17">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
@@ -1397,8 +1303,135 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyTransitiveClosure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="391">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphs/test/GeneratorMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphs/test/TestDirectedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="389" column="0" selection-start-line="389" selection-start-column="0" selection-end-line="389" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_101/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="1458" column="0" selection-start-line="1458" selection-start-column="0" selection-end-line="1458" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_101/src.zip!/java/util/HashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding>
+            <element signature="e#6499#6500#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_101/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="class#predsIterator#0;class#MyNode#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyDFS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="117" column="57" selection-start-line="117" selection-start-column="57" selection-end-line="117" selection-end-column="57" />
+          <folding>
+            <element signature="method#topSort#0;class#MyDFS#0" expanded="false" />
+            <element signature="method#topologicalSort#0;class#MyDFS#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphs/test/TestAlgorithms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <element signature="method#setUp#0;class#TestAlgorithms#0" expanded="false" />
+            <element signature="method#testTransitiveClosure#0;class#TestAlgorithms#0" expanded="false" />
+            <element signature="method#check_partitioning#0;class#TestAlgorithms#0" expanded="false" />
+            <element signature="method#check_closure#0;class#TestAlgorithms#0" expanded="false" />
+            <element signature="method#nodes#0;class#TestAlgorithms#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphs/test/GraphGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphs/benchmark/GraphBenchmark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="355" column="58" selection-start-line="355" selection-start-column="58" selection-end-line="355" selection-end-column="58" />
+          <folding>
+            <element signature="method#GraphBenchmark#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#runGraphPerformance#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#getPerformanceGraphs#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#check_graph#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#check_node#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#check_remove#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#getDBFSGraphs#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#runTransitiveClosure#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#getClosureGraphs#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#getConnectedGraphs#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#gcMem#0;class#GraphBenchmark#0" expanded="false" />
+            <element signature="method#mem#0;class#GraphBenchmark#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphs/benchmark/BenchmarkMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="12" column="65" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ks222rt_assign3/MyConnectedComponents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

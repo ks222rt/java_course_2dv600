@@ -3,13 +3,13 @@ package ks222rt_assign3;
 import graphs.DirectedGraph;
 import graphs.Node;
 
-import java.util.Collection;
+import java.util.*;
 
 /**
  * Created by Kristoffer on 2016-09-27.
  */
 public class MyConnectedComponents<E> implements graphs.ConnectedComponents<E> {
-
+    MyDFS dfs = new MyDFS();
     /**
     * Two nodes a and b are directly connected if their exist an edge (a,b)
     * or an edge (b,a). Two nodes a and k are connected if there exist a sequence
@@ -26,9 +26,45 @@ public class MyConnectedComponents<E> implements graphs.ConnectedComponents<E> {
 
     @Override
     public Collection<Collection<Node>> computeComponents(DirectedGraph dg) {
-//        http://www.cs.cornell.edu/courses/cs2112/2012sp/lectures/lec24/lec24-12sp.html
+        Collection<Collection<Node>> components = new ArrayList<>();
+        List<Object> visited = new ArrayList<>();
 
+        List order = dfs.dfs(dg);
+        List reversed = dfs.postOrder(dg);
 
-        return null;
+        for (int i  = 0; i < order.size(); i++){
+            Object node = order.get(i);
+            if (!visited.contains(node)){
+                List<Node> comp = new ArrayList<>();
+                int k = reversed.indexOf(node);
+                dfs((Node) reversed.get(k), visited, comp);
+                components.add(comp);
+            }
+        }
+
+        return components;
+    }
+
+    private void dfs(Node n, List<Object> visited, List<Node> order){
+        visited.add(n);
+        if (n.outDegree() != 0) {
+            Iterator<Node<E>> it = n.succsOf();
+            while (it.hasNext()) {
+                Node child = it.next();
+                if (!visited.contains(child)) {
+                    dfs(child, visited, order);
+                }
+            }
+        }else if (n.inDegree() != 0){
+            Iterator<Node<E>> it = n.predsOf();
+            while (it.hasNext()) {
+                Node child = (Node) it.next();
+                if (!visited.contains(child)) {
+                    dfs(child, visited, order);
+                }
+            }
+        }
+
+        order.add(n);
     }
 }
