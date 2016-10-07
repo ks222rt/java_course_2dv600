@@ -9,7 +9,6 @@ import java.util.*;
  * Created by Kristoffer on 2016-09-27.
  */
 public class MyTransitiveClosure<E> implements graphs.TransitiveClosure<E> {
-
     /**
      * Computes the transitive closure for the graph.
      *
