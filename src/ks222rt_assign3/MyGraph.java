@@ -3,6 +3,7 @@ package ks222rt_assign3;
 import graphs.Node;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by Kristoffer on 2016-09-27.
@@ -25,8 +26,11 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public Node<E> addNodeFor(E item) {
+        // If the item is null, throw a IllegalArgumentException
         if (item != null){
+            // If the node exists in the node array return the existing node
             if (!itemToNode.containsKey(item)){
+                // Otherwise create a new node and add it to both the tails and heads array + the node array
                 MyNode<E> node = new MyNode<>(item);
                 tails.add(node);
                 heads.add(node);
@@ -49,11 +53,13 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public Node<E> getNodeFor(E item) {
+        // If the item is null or doesn´t exists in the array, throw new IllegalArgumentException
         if (item == null || !itemToNode.containsKey(item))
         {
             throw new IllegalArgumentException("Item is null or wasn´t found");
         }
 
+        // Otherwise return the node
         return itemToNode.get(item);
     }
 
@@ -69,19 +75,24 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public boolean addEdgeFor(E from, E to) {
+        // If the item is null or doesn´t exists in the array, throw new RunTimeException
         if (from == null || to == null){
             throw new RuntimeException("Received null as input");
         }
 
+        // Create or get the source and target node
         MyNode<E> src = (MyNode<E>) addNodeFor(from);
         MyNode<E> tgt = (MyNode<E>) addNodeFor(to);
 
+        // If the source already has the target as successor, do nothing and return false
         if (src.hasSucc(tgt)){
             return false;
         }else{
+            // Otherwise add the target as successor to source and source as predecessor to target
             src.addSucc(tgt);
             tgt.addPred(src);
 
+            // Remove source from tail array and target from head array
             tails.remove(src);
             heads.remove(tgt);
         }
@@ -97,9 +108,11 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public boolean containsNodeFor(E item) {
+        // If the item is null, throw new RunTimeException
         if (item == null){
             throw new RuntimeException("Received null as input");
         }
+        // Otherwise return true or false if it contains in the array
         return itemToNode.containsKey(item);
     }
 
@@ -123,6 +136,7 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
 
     private class nodeIterator implements Iterator<Node<E>>{
         private int count = 0;
+        Object[] nodeArray = itemToNode.keySet().toArray();
 
         @Override
         public boolean hasNext() {
@@ -131,8 +145,7 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
 
         @Override
         public Node<E> next() {
-//            Set<E> set = itemToNode.keySet();
-            Object getNode = itemToNode.keySet().toArray()[count];
+            Object getNode = nodeArray[count];
             MyNode<E> node = itemToNode.get(getNode);
             count++;
             return node;
@@ -150,6 +163,7 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
 
     private class headsIterator implements Iterator<Node<E>>{
         private int count = 0;
+        Object[] headArray = heads.toArray();
 
         @Override
         public boolean hasNext() {
@@ -158,7 +172,7 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
 
         @Override
         public Node<E> next() {
-            Node<E> node = (Node<E>) heads.toArray()[count];
+            Node<E> node = (Node<E>) headArray[count];
             count++;
             return node;
         }
@@ -184,7 +198,7 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
 
     private class tailsIterator implements Iterator<Node<E>>{
         private int count = 0;
-
+        Object[] tailArray = tails.toArray();
         @Override
         public boolean hasNext() {
             return count < tails.size();
@@ -192,7 +206,7 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
 
         @Override
         public Node<E> next() {
-            Node<E> node = (Node<E>) tails.toArray()[count];
+            Node<E> node = (Node<E>) tailArray[count];
             count++;
             return node;
         }
@@ -213,13 +227,7 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public List<E> allItems() {
-        List<E> nodelist = new ArrayList<>();
-        Iterator it = iterator();
-        while(it.hasNext()){
-            Node<E> temp = (Node<E>) it.next();
-            nodelist.add(temp.item());
-        }
-        return nodelist;
+        return itemToNode.values().stream().map(Node::item).collect(Collectors.toList());
     }
 
     /**
@@ -244,17 +252,22 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public void removeNodeFor(E item) {
+        // If item is null och doesnt exist in the node list, throw new RunTimeException
         if (item == null || !itemToNode.containsKey(item)){
             throw new RuntimeException("Received null as input");
         }
+
+        // Get the node from the list
         MyNode<E> node = itemToNode.get(item);
 
+        // Check if the node is a head or a tail. In that case, remove it from that list
         if (node.isHead()){
             heads.remove(node);
         }else if(node.isTail()){
             tails.remove(node);
         }
 
+        // Disconnect edges and then remove it from the list
         node.disconnect();
         itemToNode.remove(item);
     }
@@ -269,10 +282,13 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public boolean containsEdgeFor(E from, E to) {
+        // If from or to is null, throw new RunTimeException
         if (from == null || to == null){
             throw new RuntimeException("Received null as input");
         }
+        // check if from and to exists in the list
         if (itemToNode.containsKey(from) && itemToNode.containsKey(to)) {
+            // Return true or false based on if from has to as successor
             return itemToNode.get(from).hasSucc(itemToNode.get(to));
         }
         return false;
@@ -290,24 +306,31 @@ public class MyGraph<E> implements graphs.DirectedGraph<E>{
      */
     @Override
     public boolean removeEdgeFor(E from, E to) {
+        // If from or to is null, throw new RunTimeException
         if (from == null || to == null){
             throw new RuntimeException("Received null as input");
         }
 
+        // Check if from and to exists in the list otherwise return false
         if (itemToNode.containsKey(from) && itemToNode.containsKey(to)){
+            // Get the nodes from the list
             MyNode<E> src = (MyNode<E>) getNodeFor(from);
             MyNode<E> tgt = (MyNode<E>) getNodeFor(to);
 
+            // Check if source as target as successor and if target has source as predecessor
             if (src.hasSucc(tgt) && tgt.hasPred(src)){
+                // Remove them from each other
                 src.removeSucc(tgt);
                 tgt.removePred(src);
 
+                // If source now is a tail add it to the list if its not already there
                 if (src.isTail()){
                     if (!tails.contains(src)){
                         tails.add(src);
                     }
                 }
 
+                // If target now is a head add it to the list if its not already there
                 if (tgt.isHead()){
                     if (!heads.contains(tgt)){
                         heads.add(tgt);

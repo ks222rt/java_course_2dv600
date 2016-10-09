@@ -18,11 +18,13 @@ public class MyTransitiveClosure<E> implements graphs.TransitiveClosure<E> {
         Map<Node<E>, Collection<Node<E>>> map = new HashMap<>();
         MyDFS dfs = new MyDFS();
 
-        for (E item : dg.allItems()){
-            Node<E> node = dg.getNodeFor(item);
-            List l = dfs.dfs(dg, node);
-            map.put(node, l);
-        }
+
+        // Iterate through every node and get a DFS list for the specific node
+        // Add it to the map with the node as key
+        dg.iterator().forEachRemaining(item -> {
+            Collection<Node<E>> list = dfs.dfs(dg, item);
+            map.put(item, list);
+        });
 
         return map;
     }

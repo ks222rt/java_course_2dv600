@@ -154,6 +154,7 @@ public class MyNode<E> extends graphs.Node<E>{
      */
     @Override
     protected void disconnect() {
+        // For every successors remove "this" node from the successors predecessor array
         for (Node<E> n : successors){
             MyNode<E> t = (MyNode<E>) n;
             if (t.hasPred(this)) {
@@ -161,6 +162,7 @@ public class MyNode<E> extends graphs.Node<E>{
             }
         }
 
+        // For every predecessor remove "this" node from the predecessors successor array
         for (Node<E> n : predecessors){
             MyNode<E> t = (MyNode<E>) n;
             if (t.hasSucc(this)){
@@ -168,6 +170,7 @@ public class MyNode<E> extends graphs.Node<E>{
             }
         }
 
+        // If the node has a reflexiveedge, remove it from each other
         if (this.hasReflexiveEdges()){
             this.removeReflexiveEdges();
         }

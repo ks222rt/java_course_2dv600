@@ -18,8 +18,10 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> dfs(DirectedGraph<E> graph, Node<E> root) {
+        // Clear the required lists
         nodeList = new ArrayList<>(); visitedList.clear();
 
+        // Get the root node from the graph and call the recursive DFS method
         root = graph.getNodeFor(root.item());
         recursiveDFS(nodeList, root, visitedList);
 
@@ -33,8 +35,10 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> dfs(DirectedGraph<E> graph) {
+        // Clear the required lists
         nodeList = new ArrayList<>(); visitedList.clear();
 
+        // For every node in the graph call the recursive DFS method if they aint been visited yet
         for (E item : graph.allItems()){
             Node<E> root = graph.getNodeFor(item);
             if (!visitedList.contains(root)){
@@ -57,9 +61,11 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> postOrder(DirectedGraph<E> g, Node<E> root) {
-        nodeList = new LinkedList<>();
-        visitedList.clear();
-        postOrder(visitedList, nodeList, root);
+        // Create a new nodeList and clear the visited list
+        nodeList = new LinkedList<>(); visitedList.clear();
+
+        // call the recursive postOrder method
+        postOrder(visitedList, nodeList, g.getNodeFor(root.item()));
         return nodeList;
     }
 
@@ -73,9 +79,10 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> postOrder(DirectedGraph<E> g) {
-        nodeList = new LinkedList<>();
-        visitedList.clear();
+        // Create a new nodeList and clear the visisted list
+        nodeList = new LinkedList<>(); visitedList.clear();
 
+        // Call postorder on every node in the graph
         for (E item : g.allItems()){
             postOrder(visitedList, nodeList, g.getNodeFor(item));
         }
@@ -94,6 +101,7 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public boolean isCyclic(DirectedGraph<E> graph) {
+        // For every node in the graph check if anyone of the successors go back to the node
         for (E item : graph.allItems()){
             Node<E> node = graph.getNodeFor(item);
             Iterator<Node<E>> it = node.succsOf();
@@ -113,13 +121,16 @@ public class MyDFS<E> implements graphs.DFS<E> {
      */
     @Override
     public List<Node<E>> topSort(DirectedGraph<E> graph) {
+        // First check if the graph is cyclic
         if (!isCyclic(graph)){
-            nodeList = new LinkedList<>();
-            visitedList.clear();
+            // Then create a new nodeList and clear the visited
+            nodeList = new LinkedList<>(); visitedList.clear();
 
+            // For every node in the graph, call postOrder method
             for (E item : graph.allItems()){
                 postOrder(visitedList, nodeList, graph.getNodeFor(item));
             }
+            // Before returning the list, reverse it
             Collections.reverse(nodeList);
 
             return nodeList;
@@ -128,23 +139,33 @@ public class MyDFS<E> implements graphs.DFS<E> {
     }
 
     private void topologicalSort(Set<Node<E>> visitedList, List<Node<E>> nodeList, Node<E> root){
+        // check if the root node already been visited
         if (!visitedList.contains(root)) {
+            // Mark the node as visisted
             visitedList.add(root);
+
+            // Iterate through all the predecessors
             Iterator it = root.predsOf();
             while (it.hasNext()) {
                 Node<E> node = (Node<E>) it.next();
                 postOrder(visitedList, nodeList, node);
             }
+
+            // Add nodelist size to node num and add it to the nodelist
             root.num = nodeList.size();
             nodeList.add(root);
         }
     }
 
     private void recursiveDFS(List<Node<E>> nodeList, Node<E> root, Set<Node<E>> visitedList){
+        // Check if root node been visited
         if (!visitedList.contains(root)) {
+            // Give the nodes num the size of the nodelist and add it to nodelist and mark it as visited
             root.num = nodeList.size();
             nodeList.add(root);
             visitedList.add(root);
+
+            // Iterate through the successors of the node and call the recursive method
             Iterator<Node<E>> it = root.succsOf();
             while (it.hasNext()) {
                 recursiveDFS(nodeList, it.next(), visitedList);
@@ -153,16 +174,20 @@ public class MyDFS<E> implements graphs.DFS<E> {
     }
 
     private void stackDFS(Set<Node<E>> visitedList, List<Node<E>> nodeList, Node<E> root){
+        // Create a stack and add the root node to the stack
         List<Node<E>> stack = new LinkedList<>();
-
         stack.add(root);
+
         while(!stack.isEmpty()){
+            // Remove the first node in the stack
             Node<E> node = stack.remove(0);
             if (!visitedList.contains(node)){
+                // Give the node num a number and add it to the nodelist and mark it as visited.
                 node.num = nodeList.size();
                 nodeList.add(node);
                 visitedList.add(node);
 
+                // Iterate through its successors and add them first in the stack
                 Iterator<Node<E>> it = node.succsOf();
                 while(it.hasNext()){
                     Node<E> next = it.next();
@@ -176,12 +201,18 @@ public class MyDFS<E> implements graphs.DFS<E> {
 
     private void postOrder(Set<Node<E>> visited, List<Node<E>> nodeList, Node<E> root){
         // Got help from http://eli.thegreenplace.net/2015/directed-graph-traversal-orderings-and-applications-to-data-flow-analysis/
+        // Check if the node has not been visited
         if (!visited.contains(root)) {
+            // Mark it as visited and..
             visited.add(root);
+
+            // .. iterate through its successors
             Iterator<Node<E>> it = root.succsOf();
             while (it.hasNext()) {
                 postOrder(visited, nodeList, it.next());
             }
+
+            // Give the node a number and add it to the nodeList
             root.num = nodeList.size();
             nodeList.add(root);
         }

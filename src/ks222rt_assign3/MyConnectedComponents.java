@@ -9,9 +9,9 @@ import java.util.*;
  * Created by Kristoffer on 2016-09-27.
  */
 public class MyConnectedComponents<E> implements graphs.ConnectedComponents<E> {
-    MyDFS dfs = new MyDFS();
-    Set<Object> visited = new HashSet<>();
-    ArrayDeque<Object> stack = new ArrayDeque<>();
+    private MyDFS dfs = new MyDFS();
+    private Set<Object> visited = new HashSet<>();
+    private boolean connected;
     /**
     * Two nodes a and b are directly connected if their exist an edge (a,b)
     * or an edge (b,a). Two nodes a and k are connected if there exist a sequence
@@ -25,92 +25,50 @@ public class MyConnectedComponents<E> implements graphs.ConnectedComponents<E> {
     *
     * @author jonasl
     */
-
     @Override
-    public Collection<Collection<Node>> computeComponents(DirectedGraph dg) {
+    public Collection<Collection<Node>> computeComponents(DirectedGraph dg){
+        Collection<Collection<Node>> components = new LinkedList<>();
         visited.clear();
-        stack.clear();
 
-        Collection<Collection<Node>> components = new ArrayList<>();
-
-        List order = dfs.dfs(dg);
-        List reversed = dfs.postOrder(dg);
-
-//          This approach crash with 100 in the benchmark but is so much faster than the version below
-//        for (int i  = 0; i < order.size(); i++){
-//            Object node = order.get(i);
-//            if (!visited.contains(node)){
-//                List<Node> comp = new ArrayList<>();
-//                int k = reversed.indexOf(node);
-//                dfs((Node) reversed.get(k), visited, comp);
-//                components.add(comp);
-//            }
-//        }
-        Iterator it = order.iterator();
-
-        while(it.hasNext()){
-            Object node = it.next();
-            if (!visited.contains(node)){
-                List<Node> comp = new ArrayList<>();
-                int k = reversed.indexOf(node);
-                stack.add(reversed.get(k));
-
-                while(!stack.isEmpty()){
-                    Node n = (Node) stack.removeFirst();
-                    if (!visited.contains(n)) {
-                        visited.add(n);
-                        comp.add(n);
-
-                        if (n.outDegree() != 0) {
-                            Iterator<Node<E>> successors = n.succsOf();
-                            while (successors.hasNext()) {
-                                Node child = successors.next();
-                                if (!stack.contains(child) || !visited.contains(child)) {
-                                    stack.addFirst(child);
-                                }
+        // Iterate over every node in the graph
+        dg.iterator().forEachRemaining(item -> {
+            connected = false;
+            // Has node been visited yet? if not..
+            if(!visited.contains(item))
+            {
+                // Create a DFS list based on the node and iterate over the nodes
+                List order = dfs.dfs(dg, (Node) item);
+                Iterator orderIterator = order.iterator();
+                while(orderIterator.hasNext()){
+                    Object node = orderIterator.next();
+                    // If node has been visited before. Either the same which is the root of the dfs list or..
+                    // from another collection of connected components
+                    if (visited.contains(node)){
+                        // Iterate over all collections in the components collection
+                        components.iterator().forEachRemaining(component -> {
+                            // if a node already exists in a component there is a connection
+                            // Add the dfs list to the component and make them as visited.
+                            // and set connected to true so the list wont be added again.
+                            if(component.contains(node)){
+                                component.addAll(order);
+                                visited.addAll(order);
+                                connected = true;
                             }
-                        } else if (n.inDegree() != 0) {
-                            Iterator<Node<E>> predecessors = n.predsOf();
-                            while (predecessors.hasNext()) {
-                                Node child = (Node) predecessors.next();
-                                if (!visited.contains(child)) {
-                                    if (!stack.contains(child) || !visited.contains(child)) {
-                                        stack.addFirst(child);
-                                    }
-                                }
-                            }
-                        }
+                        });
                     }
                 }
-
-                components.add(comp);
+                // If there wasn´t any existing connection with the list, create a new collection and add it to the
+                // Components list and mark them as visited.
+                if(!connected)
+                {
+                    visited.addAll(order);
+                    Collection<Node> comp = new HashSet<>();
+                    comp.addAll(order);
+                    components.add(comp);
+                }
             }
-        }
-
+        });
         return components;
     }
 
-    // Can be used but with over 100 in the benchmark this crash due to stackoverflow
-    private void dfs(Node n, List<Object> visited, List<Node> order){
-        visited.add(n);
-        if (n.outDegree() != 0) {
-            Iterator<Node<E>> it = n.succsOf();
-            while (it.hasNext()) {
-                Node child = it.next();
-                if (!visited.contains(child)) {
-                    dfs(child, visited, order);
-                }
-            }
-        }else if (n.inDegree() != 0){
-            Iterator<Node<E>> it = n.predsOf();
-            while (it.hasNext()) {
-                Node child = (Node) it.next();
-                if (!visited.contains(child)) {
-                    dfs(child, visited, order);
-                }
-            }
-        }
-
-        order.add(n);
-    }
 }
