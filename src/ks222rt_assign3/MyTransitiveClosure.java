@@ -18,7 +18,6 @@ public class MyTransitiveClosure<E> implements graphs.TransitiveClosure<E> {
         Map<Node<E>, Collection<Node<E>>> map = new HashMap<>();
         MyDFS dfs = new MyDFS();
 
-
         // Iterate through every node and get a DFS list for the specific node
         // Add it to the map with the node as key
         dg.iterator().forEachRemaining(item -> {

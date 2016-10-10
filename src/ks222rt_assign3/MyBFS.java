@@ -41,7 +41,8 @@ public class MyBFS<E> implements graphs.BFS<E>{
         // Clear all the required lists
         nodeList.clear(); nodeQueue.clear(); visitedList.clear();
         // For every node in the graph call the BFS method
-        for (E item : graph.allItems()){
+        List<E> items = graph.allItems();
+        for (E item : items){
             Node<E> node = graph.getNodeFor(item);
             if (!visitedList.contains(node)){
                 nodeQueue.add(node);

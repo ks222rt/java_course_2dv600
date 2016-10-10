@@ -39,7 +39,8 @@ public class MyDFS<E> implements graphs.DFS<E> {
         nodeList = new ArrayList<>(); visitedList.clear();
 
         // For every node in the graph call the recursive DFS method if they aint been visited yet
-        for (E item : graph.allItems()){
+        List<E> items = graph.allItems();
+        for (E item : items){
             Node<E> root = graph.getNodeFor(item);
             if (!visitedList.contains(root)){
                 recursiveDFS(nodeList, root, visitedList);

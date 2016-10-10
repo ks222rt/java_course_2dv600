@@ -1,0 +1,55 @@
+- Depth-First Search as implemented in ks222rt_assign3.MyDFS.dfs(DirectedGraph<E> graph):
+
+http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/
+
+According to this source the time complexity in a DFS search would be O(node+edge).
+Where node is the number of nodes visited, which will be just once in each graph and
+where edge is the number of edges for nodes.
+
+(Pseudo code from my implementation)
+Node : in list
+ if Node not been visited
+    Call recursive method:
+        add Node to visited
+        add Node to nodelist
+            Edge : in Node successor list
+                Call recursive method
+
+ else if all Nodes been visited return node list
+------------------------------------------------------------------------------------------------
+
+
+- Breadth-First Search as implemented in ks222rt_assign3.MyBFS.bfs(DirectedGraph<E> graph)
+
+http://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/
+
+Same as the DFS method. This will go through all nodes and edges, but DFS could be faster due
+to the search might find the depth before all nodes been visited.
+So the time complexity would be O(Node+Edge).
+
+(Pseudo code from my implementation)
+Node : in list
+  if Node not been visited:
+    Call recursive method:
+        while queue not empty:
+          first Node : in queue:
+            if Node not been visited:
+                add to visited
+                add to nodelist
+
+            Child : in Node successor list:
+                if Child not been visited
+                    add to queue
+
+else if all Nodes been visited return node list
+-------------------------------------------------------------------------------------------------
+
+
+- Transitive Closure as implement in ks222rt_assign3.MyTransitiveClosure.computeClosure(DirectedGraph<E> graph)
+
+
+
+
+
+
+
