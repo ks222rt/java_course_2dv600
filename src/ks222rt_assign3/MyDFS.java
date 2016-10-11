@@ -39,15 +39,13 @@ public class MyDFS<E> implements graphs.DFS<E> {
         nodeList = new ArrayList<>(); visitedList.clear();
 
         // For every node in the graph call the recursive DFS method if they aint been visited yet
-        List<E> items = graph.allItems();
-        for (E item : items){
-            Node<E> root = graph.getNodeFor(item);
-            if (!visitedList.contains(root)){
-                recursiveDFS(nodeList, root, visitedList);
+        for (Node<E> node : graph){ // O(n)
+            if (!visitedList.contains(node)){ // O(1)
+                recursiveDFS(nodeList, node, visitedList); // O(1)
             }
         }
 
-        return nodeList;
+        return nodeList;    // O(n + e)
     }
 
     /**
@@ -84,8 +82,8 @@ public class MyDFS<E> implements graphs.DFS<E> {
         nodeList = new LinkedList<>(); visitedList.clear();
 
         // Call postorder on every node in the graph
-        for (E item : g.allItems()){
-            postOrder(visitedList, nodeList, g.getNodeFor(item));
+        for (Node<E> node : g){
+            postOrder(visitedList, nodeList, node);
         }
 
         return nodeList;
@@ -103,8 +101,7 @@ public class MyDFS<E> implements graphs.DFS<E> {
     @Override
     public boolean isCyclic(DirectedGraph<E> graph) {
         // For every node in the graph check if anyone of the successors go back to the node
-        for (E item : graph.allItems()){
-            Node<E> node = graph.getNodeFor(item);
+        for (Node<E> node : graph){
             Iterator<Node<E>> it = node.succsOf();
             while(it.hasNext()){
                 if (node == it.next()){
@@ -128,8 +125,8 @@ public class MyDFS<E> implements graphs.DFS<E> {
             nodeList = new LinkedList<>(); visitedList.clear();
 
             // For every node in the graph, call postOrder method
-            for (E item : graph.allItems()){
-                postOrder(visitedList, nodeList, graph.getNodeFor(item));
+            for (Node<E> node : graph){
+                postOrder(visitedList, nodeList, node);
             }
             // Before returning the list, reverse it
             Collections.reverse(nodeList);
@@ -160,18 +157,19 @@ public class MyDFS<E> implements graphs.DFS<E> {
 
     private void recursiveDFS(List<Node<E>> nodeList, Node<E> root, Set<Node<E>> visitedList){
         // Check if root node been visited
-        if (!visitedList.contains(root)) {
+        if (!visitedList.contains(root)) { // O(1)
             // Give the nodes num the size of the nodelist and add it to nodelist and mark it as visited
-            root.num = nodeList.size();
-            nodeList.add(root);
-            visitedList.add(root);
+            root.num = nodeList.size(); // O(1)
+            nodeList.add(root); // O(1)
+            visitedList.add(root); // O(1)
 
             // Iterate through the successors of the node and call the recursive method
-            Iterator<Node<E>> it = root.succsOf();
-            while (it.hasNext()) {
-                recursiveDFS(nodeList, it.next(), visitedList);
+            Iterator<Node<E>> it = root.succsOf(); // O(1)
+            while (it.hasNext()) { // O(e)
+                recursiveDFS(nodeList, it.next(), visitedList); // O(1)
             }
         }
+        // O(n + e)
     }
 
     private void stackDFS(Set<Node<E>> visitedList, List<Node<E>> nodeList, Node<E> root){

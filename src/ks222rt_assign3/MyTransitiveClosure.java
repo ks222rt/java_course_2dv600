@@ -20,12 +20,12 @@ public class MyTransitiveClosure<E> implements graphs.TransitiveClosure<E> {
 
         // Iterate through every node and get a DFS list for the specific node
         // Add it to the map with the node as key
-        dg.iterator().forEachRemaining(item -> {
-            Collection<Node<E>> list = dfs.dfs(dg, item);
+        dg.iterator().forEachRemaining(item -> { // O(n)
+            Collection<Node<E>> list = dfs.dfs(dg, item); // O(n + e)
             map.put(item, list);
         });
 
-        return map;
+        return map;  // O(n(n + e)) = O(n^2(n + e))
     }
 
 }

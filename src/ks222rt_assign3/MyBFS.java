@@ -28,7 +28,7 @@ public class MyBFS<E> implements graphs.BFS<E>{
         // Call the recursive BFS method to get the nodelist full
         recursiveBFS(nodeQueue, visitedList, nodeList);
 
-        return nodeList;
+        return nodeList; // O(n + e)
     }
 
     /**
@@ -40,16 +40,17 @@ public class MyBFS<E> implements graphs.BFS<E>{
     public List<Node<E>> bfs(DirectedGraph<E> graph) {
         // Clear all the required lists
         nodeList.clear(); nodeQueue.clear(); visitedList.clear();
+
         // For every node in the graph call the BFS method
-        List<E> items = graph.allItems();
-        for (E item : items){
-            Node<E> node = graph.getNodeFor(item);
-            if (!visitedList.contains(node)){
-                nodeQueue.add(node);
-                recursiveBFS(nodeQueue, visitedList, nodeList);
+        for(Node<E> node : graph)  // O(n)
+        {
+            if (!visitedList.contains(node)){ // O(1)
+                nodeQueue.add(node); // O(1)
+                recursiveBFS(nodeQueue, visitedList, nodeList);  // O(n + c)
             }
         }
-        return nodeList;
+
+        return nodeList;  // O(n(n+e)) = O(n^2 + ne)
     }
 
     private void nonRecursiveBFS(Node<E> node, Set<Node<E>> visitedList, List<Node<E>> nodeList){
@@ -72,32 +73,40 @@ public class MyBFS<E> implements graphs.BFS<E>{
 
     private void recursiveBFS(Set<Node<E>> nodeQueue, Set<Node<E>> visitedList, List<Node<E>> nodeList){
         // As long as the queue aint empty keep call the recursive method
-        if (!nodeQueue.isEmpty()) {
+        if (!nodeQueue.isEmpty()) {  // O(1)
             // Iterate through the queue of nodes
-            Iterator<Node<E>> it = nodeQueue.iterator();
+            Iterator<Node<E>> it = nodeQueue.iterator(); // O(1)
+
             // Re-initiate the queue so the iterator works
-            nodeQueue = new HashSet<>();
-            while(it.hasNext()){
-                Node<E> node = it.next();
+            nodeQueue = new HashSet<>(); // O(1)
+
+            while(it.hasNext()){ // O(n)
+                Node<E> node = it.next(); // O(1)
+
                 // Check if the node already been visited
-                if (!nodeList.contains(node)) {
+                if (!visitedList.contains(node)) { // O(1)
+
                     // Add it to the visit list, set the num to nodeList size and add it to nodeList
-                    visitedList.add(node);
-                    node.num = nodeList.size();
-                    nodeList.add(node);
+                    visitedList.add(node); // O(1)
+                    node.num = nodeList.size(); // O(1)
+                    nodeList.add(node); // O(1)
                 }
+
                 // Iterate through the nodes children
-                Iterator<Node<E>> nodeIT = node.succsOf();
-                while(nodeIT.hasNext()){
-                    Node<E> child = nodeIT.next();
+                Iterator<Node<E>> nodeIT = node.succsOf(); // O(1)
+
+                while(nodeIT.hasNext()){  // O(c)
+                    Node<E> child = nodeIT.next(); // O(1)
+
                     // Check if the child has been visited, if not add to queue
-                    if (!visitedList.contains(child)){
-                        nodeQueue.add(child);
+                    if (!visitedList.contains(child)){ // O(1)
+                        nodeQueue.add(child); // O(1)
                     }
                 }
             }
 
-            recursiveBFS(nodeQueue, visitedList, nodeList);
+            recursiveBFS(nodeQueue, visitedList, nodeList); // O(1)
+            // Time complexity O(n + c)
         }
     }
 }

@@ -31,40 +31,40 @@ public class MyConnectedComponents<E> implements graphs.ConnectedComponents<E> {
         visited.clear();
 
         // Iterate over every node in the graph
-        dg.iterator().forEachRemaining(item -> {
-            connected = false;
+        dg.iterator().forEachRemaining(item -> { // O(n)
+            connected = false;  // O(1)
             // Has node been visited yet? if not..
-            if(!visited.contains(item))
+            if(!visited.contains(item))  // O(1)
             {
                 // Create a DFS list based on the node and iterate over the nodes
-                List order = dfs.dfs(dg, (Node) item);
-                Iterator orderIterator = order.iterator();
-                while(orderIterator.hasNext()){
-                    Object node = orderIterator.next();
+                List order = dfs.dfs(dg, (Node) item);  // O(n + e)
+                Iterator orderIterator = order.iterator();  // O(1)
+                while(orderIterator.hasNext()){  // O(n)
+                    Object node = orderIterator.next();  // O(1)
                     // If node has been visited before. Either the same which is the root of the dfs list or..
                     // from another collection of connected components
-                    if (visited.contains(node)){
+                    if (visited.contains(node)){ // O(1)
                         // Iterate over all collections in the components collection
-                        components.iterator().forEachRemaining(component -> {
+                        components.iterator().forEachRemaining(component -> { // O(n)
                             // if a node already exists in a component there is a connection
                             // Add the dfs list to the component and make them as visited.
                             // and set connected to true so the list wont be added again.
-                            if(component.contains(node)){
-                                component.addAll(order);
-                                visited.addAll(order);
-                                connected = true;
+                            if(component.contains(node)){ // O(1)
+                                component.addAll(order); // O(1)
+                                visited.addAll(order); // O(1) or O(n log n)?
+                                connected = true; // O(1)
                             }
                         });
                     }
                 }
                 // If there wasn´t any existing connection with the list, create a new collection and add it to the
                 // Components list and mark them as visited.
-                if(!connected)
+                if(!connected) // O(1)
                 {
-                    visited.addAll(order);
-                    Collection<Node> comp = new HashSet<>();
-                    comp.addAll(order);
-                    components.add(comp);
+                    visited.addAll(order); // O(1) or O(n log n)?
+                    Collection<Node> comp = new HashSet<>(); // O(1)
+                    comp.addAll(order); // O(1) or O(n log n)?
+                    components.add(comp); // O(1)
                 }
             }
         });

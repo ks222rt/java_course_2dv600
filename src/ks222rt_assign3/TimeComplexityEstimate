@@ -1,19 +1,20 @@
 - Depth-First Search as implemented in ks222rt_assign3.MyDFS.dfs(DirectedGraph<E> graph):
 
 http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/
+Slides we´ve got from Johan - https://slack-files.com/files-pri-safe/T0347K4GQ-F2MTW9NTH/timecomplexity-search.pdf?c=1476194791-b1c08f9b2fc8d04f57885b3b98841707276e8462
 
 According to this source the time complexity in a DFS search would be O(node+edge).
 Where node is the number of nodes visited, which will be just once in each graph and
 where edge is the number of edges for nodes.
 
 (Pseudo code from my implementation)
-Node : in list
- if Node not been visited
-    Call recursive method:
-        add Node to visited
-        add Node to nodelist
-            Edge : in Node successor list
-                Call recursive method
+Node : in list // O(n)
+ if Node not been visited // O(1)
+    Call recursive method: // O(1)
+        add Node to visited  // O(1)
+        add Node to nodelist  // O(1)
+            Edge : in Node successor list // O(e)
+                Call recursive method // O(n+e)
 
  else if all Nodes been visited return node list
 ------------------------------------------------------------------------------------------------
@@ -22,24 +23,27 @@ Node : in list
 - Breadth-First Search as implemented in ks222rt_assign3.MyBFS.bfs(DirectedGraph<E> graph)
 
 http://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/
+Slides we´ve got from Johan - https://slack-files.com/files-pri-safe/T0347K4GQ-F2MTW9NTH/timecomplexity-search.pdf?c=1476194791-b1c08f9b2fc8d04f57885b3b98841707276e8462
 
 Same as the DFS method. This will go through all nodes and edges, but DFS could be faster due
 to the search might find the depth before all nodes been visited.
 So the time complexity would be O(Node+Edge).
 
 (Pseudo code from my implementation)
-Node : in list
-  if Node not been visited:
-    Call recursive method:
-        while queue not empty:
-          first Node : in queue:
-            if Node not been visited:
-                add to visited
-                add to nodelist
+Node : in list // O(n)
+  if Node not been visited: // O(1)
+    Call recursive method:  // O(1)
+        while queue not empty:  // O(1)
+          first Node : in queue:  // O(1)
+            if Node not been visited:  // O(1)
+                add to visited  // O(1)
+                add to nodelist  // O(1)
 
-            Child : in Node successor list:
-                if Child not been visited
-                    add to queue
+            Child : in Node successor list: // O(e)
+                if Child not been visited // O(1)
+                    add to queue  // O(1)
+
+        call recursive method: // O(n + e)
 
 else if all Nodes been visited return node list
 -------------------------------------------------------------------------------------------------
@@ -47,9 +51,20 @@ else if all Nodes been visited return node list
 
 - Transitive Closure as implement in ks222rt_assign3.MyTransitiveClosure.computeClosure(DirectedGraph<E> graph)
 
+Slides we´ve got from Johan - https://slack-files.com/files-pri-safe/T0347K4GQ-F2MTW9NTH/timecomplexity-search.pdf?c=1476194791-b1c08f9b2fc8d04f57885b3b98841707276e8462
+
+According to the source and my implementation the time complexity should be O(n(n+e)) = O(n^2 + ne)
+
+Node : in graph // O(n)
+    List l = dfs.dfs() // O(n + e)
+    map.put(node, l)
+
+return map
+--------------------------------------------------------------------------------------------------
 
 
+- Connected Components as implement in X.MyConnectedComponents.computeComponents(DirectedGraph<E> graph)
 
-
-
+addAll() = http://4.bp.blogspot.com/-eor4DBhjVFU/UEFtIsHli3I/AAAAAAAAAGA/vg6oUjFMjDU/s1600/ListPerf.png
+addAll gives O(1)?
 
