@@ -14,7 +14,7 @@ Node : in list // O(n)
         add Node to visited  // O(1)
         add Node to nodelist  // O(1)
             Edge : in Node successor list // O(e)
-                Call recursive method // O(n+e)
+                Call recursive method // O(n)
 
  else if all Nodes been visited return node list
 ------------------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ Node : in list // O(n)
                 if Child not been visited // O(1)
                     add to queue  // O(1)
 
-        call recursive method: // O(n + e)
+        call recursive method: // O(n)
 
 else if all Nodes been visited return node list
 -------------------------------------------------------------------------------------------------
@@ -66,5 +66,5 @@ return map
 - Connected Components as implement in X.MyConnectedComponents.computeComponents(DirectedGraph<E> graph)
 
 addAll() = http://4.bp.blogspot.com/-eor4DBhjVFU/UEFtIsHli3I/AAAAAAAAAGA/vg6oUjFMjDU/s1600/ListPerf.png
-addAll gives O(1)?
+
 

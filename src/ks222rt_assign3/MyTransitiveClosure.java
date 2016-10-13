@@ -25,7 +25,7 @@ public class MyTransitiveClosure<E> implements graphs.TransitiveClosure<E> {
             map.put(item, list);
         });
 
-        return map;  // O(n(n + e)) = O(n^2(n + e))
+        return map;  // O(n(n + e)) = O(n^2(n + e)) = O(n^2 + ne)
     }
 
 }

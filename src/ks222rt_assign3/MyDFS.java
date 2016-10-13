@@ -23,7 +23,7 @@ public class MyDFS<E> implements graphs.DFS<E> {
 
         // Get the root node from the graph and call the recursive DFS method
         root = graph.getNodeFor(root.item());
-        recursiveDFS(nodeList, root, visitedList);
+        recursiveDFS(nodeList, root, visitedList); // O(1)
 
         return nodeList;
     }
@@ -166,7 +166,7 @@ public class MyDFS<E> implements graphs.DFS<E> {
             // Iterate through the successors of the node and call the recursive method
             Iterator<Node<E>> it = root.succsOf(); // O(1)
             while (it.hasNext()) { // O(e)
-                recursiveDFS(nodeList, it.next(), visitedList); // O(1)
+                recursiveDFS(nodeList, it.next(), visitedList); // O(n)
             }
         }
         // O(n + e)
