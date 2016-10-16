@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class MyConnectedComponents<E> implements graphs.ConnectedComponents<E> {
     private MyDFS dfs = new MyDFS();
-    private Set<Object> visited = new HashSet<>();
+    private Set<Object> visited = new LinkedHashSet<>();
     private boolean connected;
     /**
     * Two nodes a and b are directly connected if their exist an edge (a,b)
@@ -38,39 +38,48 @@ public class MyConnectedComponents<E> implements graphs.ConnectedComponents<E> {
             {
                 // Create a DFS list based on the node and iterate over the nodes
                 List order = dfs.dfs(dg, (Node) item);  // O(n + e) ----> N(N+E)
-                Collection<Node> comp = new HashSet<>(); // O(1)
+                Iterator orderIterator = order.iterator();  // O(1)
 
-                // Loop through the dfs and add every node to a component and mark them as visited
-                for (Object node : order){ // O(n)
-                    comp.add((Node) node); // O(1)
-                    visited.add(node); // O(1)
+                while(orderIterator.hasNext()){  // O(n)  ---- > O(n(n+e) + n(n))
+                    Object node = orderIterator.next();  // O(1)
+
+                    // If node has been visited before. Either the same which is the root of the dfs list or..
+                    // from another collection of connected components
+                    if (visited.contains(node)){ // O(1)
+
+                        // Iterate over all collections in the components collection
+                        components.iterator().forEachRemaining(component -> { // O(n)  ---> O(n(n+e) + n(n(c)))
+
+                            // if a node already exists in a component there is a connection
+                            // Add the dfs list to the component and make them as visited.
+                            // and set connected to true so the list wont be added again.
+                            if(component.contains(node)){ // O(1)
+                                component.addAll(order); // O(1)
+                                visited.addAll(order); // O(1) --->  N(N+E) + N(N(C))  --> N^2 + NE + N*C
+                                connected = true; // O(1)
+                            }
+                        });
+                    }
                 }
 
-                // Loop through components array (which in best case is not "n" but "c")
-                // compare component from the array with the newly created component
-                // Disjoint will be true if they do not have the same node in it
-                // false will occur if there is a connection in them
-                // add all nodes in comp 2 to comp 1
-                components.iterator().forEachRemaining(component -> { // O(n)
-                    if (!Collections.disjoint(component, comp)){  // O(n)
-                        component.addAll(comp); // O(n)
-                        connected = true;  // O(1)
-                    }
-                });
-
-                // If there wasn´t any connection add the newly created component to the list
+                // If there wasn´t any existing connection with the list, create a new collection and add it to the
+                // Components list and mark them as visited.
                 if(!connected) // O(1)
                 {
+                    Collection<Node> comp = new LinkedHashSet<>(); // O(1)
+                    visited.addAll(order); // O(1)
+                    comp.addAll(order); // O(1)
                     components.add(comp); // O(1)
                 }
+
             }
         });
 
-        // O(n(ne + n + n(n(n))))
-        // O(n(ne + n + n^3))
-        // O(n^2 + ne + n^2 + n^3)
-        // O(2n^2 + ne + n^4)
-        // O(n^2 + ne + n^4)
+        // O(n(ne + n(c)))
+        // O(n(ne + n*c))
+        // O(n^2 + ne + n^2*c)
+        // O(2n^2 + ne + n*c)
+        // O(n^2 + ne + n*c)
 
         return components;
     }
