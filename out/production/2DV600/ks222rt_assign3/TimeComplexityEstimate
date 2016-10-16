@@ -14,7 +14,7 @@ Node : in list // O(n)
         add Node to visited  // O(1)
         add Node to nodelist  // O(1)
             Edge : in Node successor list // O(e)
-                Call recursive method // O(n+e)
+                Call recursive method // O(n)
 
  else if all Nodes been visited return node list
 ------------------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ Node : in list // O(n)
                 if Child not been visited // O(1)
                     add to queue  // O(1)
 
-        call recursive method: // O(n + e)
+        call recursive method: // O(n)
 
 else if all Nodes been visited return node list
 -------------------------------------------------------------------------------------------------
@@ -64,6 +64,29 @@ return map
 
 
 - Connected Components as implement in X.MyConnectedComponents.computeComponents(DirectedGraph<E> graph)
+Slides we´ve got from Johan - https://slack-files.com/files-pri-safe/T0347K4GQ-F2MTW9NTH/timecomplexity-search.pdf?c=1476194791-b1c08f9b2fc8d04f57885b3b98841707276e8462
 
+Node : in graph // O(n)
+    create dfs on node // O(n + e)
+        node : in dfs // O(n)
+            add to component // O(1)
+            add to visisted  // O(1)
 
+        component in components // O(n)
+            use disjoint to compare nodes in comp 1 and comp 2 // O(n)
+                addAll to comp 1 from comp 2 // O(n)
+
+this would give me a time complexity:
+
+O(n(ne + n + n(n(n))))
+O(n(ne + n + n^3))
+O(n^2 + ne + n^2 + n^4)
+O(2n^2 + ne + n^4)
+O(n^2 + ne + n^4)
+
+but this is just if you use n on the component loop. But that wont loop as many times as
+looping through the graph so in a better case it would be:
+
+O(n^2 + ne + c^3) = which will be faster than O(n^2 + ne + n^4),
+since components will be a smaller than the graph
 
