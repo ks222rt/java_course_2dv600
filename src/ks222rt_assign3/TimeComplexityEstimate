@@ -4,9 +4,9 @@ http://stackoverflow.com/questions/7294634/what-are-the-time-complexities-of-var
 http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/
 Slides we´ve got from Johan - https://slack-files.com/files-pri-safe/T0347K4GQ-F2MTW9NTH/timecomplexity-search.pdf?c=1476194791-b1c08f9b2fc8d04f57885b3b98841707276e8462
 
-According to this source the time complexity in a DFS search would be O(node+edge).
+According to the sources the time complexity in a DFS search would be O(node+edge).
 Where node is the number of nodes visited, which will be just once in each graph and
-where edge is the number of edges for nodes.
+where edge is the number of edges from the nodes.
 
 (Pseudo code from my implementation)
 Node : in list // O(n)
@@ -27,8 +27,7 @@ http://stackoverflow.com/questions/7294634/what-are-the-time-complexities-of-var
 http://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/
 Slides we´ve got from Johan - https://slack-files.com/files-pri-safe/T0347K4GQ-F2MTW9NTH/timecomplexity-search.pdf?c=1476194791-b1c08f9b2fc8d04f57885b3b98841707276e8462
 
-Same as the DFS method. This will go through all nodes and edges, but DFS could be faster due
-to the search might find the depth before all nodes been visited.
+Same as the DFS method. This will go through all nodes and edges.
 So the time complexity would be O(Node+Edge).
 
 (Pseudo code from my implementation)
@@ -66,21 +65,22 @@ return map
 --------------------------------------------------------------------------------------------------
 
 
-- Connected Components as implement in X.MyConnectedComponents.computeComponents(DirectedGraph<E> graph)
+- Connected Components as implement in ks222rt_assign3.MyConnectedComponents.computeComponents(DirectedGraph<E> graph)
 
+http://infotechgems.blogspot.se/2011/11/java-collections-performance-time.html
 http://stackoverflow.com/questions/7294634/what-are-the-time-complexities-of-various-data-structures/7294635#7294635
 Slides we´ve got from Johan - https://slack-files.com/files-pri-safe/T0347K4GQ-F2MTW9NTH/timecomplexity-search.pdf?c=1476194791-b1c08f9b2fc8d04f57885b3b98841707276e8462
 
-This solution aint good but it works. A good solution would give the almost the same time complexity as Transitive closuer but
+This solution aint good but it works. A good solution would give almost the same time complexity as Transitive closure but
 did not have the time to rework this solution to have a better complexity.
 
 Node : in graph // O(n)
     create dfs on node // O(n + e)
-        node : in dfs // O(n)
-            component in components // O(c) since this array is not based on amount of nodes
-                if node exist in component
-                    add to component // O(1)
-                    add to visisted  // O(1)
+    node : in dfs // O(n)
+        component in components // O(c) since this array is not based on amount of nodes
+            if node exist in component
+                add to component // O(1)
+                add to visisted  // O(1)
 
 
 this would give me a time complexity as:
